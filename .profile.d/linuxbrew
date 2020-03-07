@@ -1,4 +1,4 @@
-eval $(~/.linuxbrew/bin/brew shellenv)
+eval $(.linuxbrew/Homebrew/bin/brew shellenv)
 
 if brew --version > /dev/null; then
     if [ -f $(brew --prefix)/etc/bash_completion ]; then

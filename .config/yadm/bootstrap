@@ -1,12 +1,13 @@
 cd "$HOME"
 
-yadm submodule update --recursive --init
 yadm remote set-url origin "git@github.com:pkoch/yadm.git"
+yadm submodule update --recursive --init
 
-brew bundle -g
+. .profile
 
+brew bundle -g --no-upgrade
+
+cat .tool-versions  | awk '{print $1}' | xargs -I= asdf plugin-add =
 asdf install
 
-if command -v vim >/dev/null 2>&1; then
-  vim '+PlugUpdate' '+PlugClean!' '+qall'
-fi
+vim '+PlugUpdate' '+PlugClean!' '+qall'
