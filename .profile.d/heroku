@@ -1,0 +1,15 @@
+
+# heroku autocomplete setup
+# If you get some error like
+# ```
+# /home/pkoch/.linuxbrew/bin/heroku: line 45: /home/pkoch/.linuxbrew/opt/heroku-node/share/node: cannot execute binary file: Exec format error
+# ```
+# It's prolly because heroku's pre-bundled node doesn't work for you. Try
+# installing a new node, and rejigger things like:
+# ```
+# $ cd /var/home/pkoch/.linuxbrew/opt/heroku-node/share/
+# $ mv node node.old
+# $ ln -s `which node`
+# ```
+
+. <(heroku autocomplete:script bash)
