@@ -1,4 +1,4 @@
-. /etc/profile
+[ -r /etc/profile ] && . /etc/profile
 
 if ! [ -z "$MYPROFILESOURCED" ]; then  return; else MYPROFILESOURCED="Y"; fi
 
