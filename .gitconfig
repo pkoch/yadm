@@ -1,0 +1,68 @@
+[user]
+	name = Paulo Köch
+	email = paulo.koch@gmail.com
+
+[includeIf "gitdir:~/github.com/lifeonmarspt/"]
+	path = .gitconfig-lom
+
+[includeIf "gitdir:~/github.com/trustfractal/"]
+	path = .gitconfig-fractal
+
+[core]
+	editor = vim
+	whitespace = trailing-space,space-before-tab,tab-in-indent
+
+[alias]
+	glb = log --graph --decorate --pretty=oneline --abbrev-commit
+	gl  = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	gla = log --graph --decorate --pretty=oneline --abbrev-commit --all --reflog
+	b = branch
+	d = diff
+	dc = diff --cached
+	s = status -sb
+	st = status -s
+	ci = commit
+	cian = commit --amend --no-edit
+	co = checkout
+	ff = merge --ff-only
+	mnff = merge --no-ff
+	mff = merge --ff-only
+	mnffn = merge --no-ff --no-edit
+	pr = pull --rebase
+	pra = pull --rebase --autostash
+	pff = pull --ff-only
+	pfl = push --force-with-lease
+	fap = fetch --all --prune
+	fp = fetch --prune
+	lsf = ls-files --exclude-standard -o -c
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = green reverse
+	local = green
+	remote = red
+
+[push]
+	default = current
+
+[merge]
+	conflictStyle = diff3
+	stat = False
+
+[mergetool]
+	prompt = false
+	keepBackup = false
+	tool = kdiff3
+
+[mergetool "kdiff3"]
+	cmd = kdiff3 $BASE $LOCAL $REMOTE -o $MERGED
+
+[rebase]
+	autosquash = true
+
+[grep]
+	linenumber = true
+[branch]
+	autosetuprebase = always
