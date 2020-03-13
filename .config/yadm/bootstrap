@@ -5,8 +5,6 @@ yadm submodule update --recursive --init
 
 . .profile
 
-brew bundle -g --no-upgrade
-
 cat .tool-versions  | awk '{print $1}' | xargs -I= asdf plugin-add =
 asdf install
 
