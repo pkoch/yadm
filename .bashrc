@@ -7,7 +7,7 @@ case $- in
   *) return ;; # Not interative, bail
 esac
 
-for f in `find ~/.bashrc.d/ -mindepth 1 -readable | sort -n`; do
+for f in `find ~/.bashrc.d/ -mindepth 1 -readable -not -name '.*' | sort -n`; do
   . "$f"
 done; unset f
 
