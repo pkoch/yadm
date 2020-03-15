@@ -12,3 +12,5 @@ for f in `find ~/.bashrc.d/ -mindepth 1 -readable | sort -n`; do
 done; unset f
 
 . ~/.profile
+
+unset MYBASHRCSOURCED

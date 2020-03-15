@@ -10,3 +10,5 @@ for f in `find ~/.profile.d -mindepth 1 -readable | sort -n`; do
 done; unset f
 
 . ~/.bashrc
+
+unset MYPROFILESOURCED
