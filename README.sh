@@ -5,7 +5,7 @@
 set -xeuo pipefail
 cd
 
-files="$(find . -mindepth 1 -maxdepth 1 -not -name .ssh -not -name .gnupg)"
+files="$(find . -mindepth 1 -maxdepth 1 -not -name .gnupg | grep -v .ssh/id_)"
 tar czf old_contents.tgz $files
 rm -rf $files
 
