@@ -1,7 +1,7 @@
 #!/bin/bash
 # YADM
 # ====
-# ssh target 'curl https://github.com/pkoch/yadm/blob/master/README.sh | bash'
+# ssh target 'wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash'
 set -xeuo pipefail
 cd
 
