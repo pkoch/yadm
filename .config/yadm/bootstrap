@@ -1,7 +1,7 @@
 cd "$HOME"
 
 mkdir -p .ssh
-ssh-keyscan github.com >> ~/.ssh/known_hosts
+ssh-keyscan github.com >> ~/.ssh/known_hosts 2>&1 | grep -v '^#'
 chmod 700 .ssh
 chmod 600 .ssh/*
 
