@@ -10,4 +10,4 @@ else
   has_private_key || echo "!!! No local GPG private key found for $MY_GPG_KEY" >&2
 fi
 
-unset -f has_private_key
+#unset -f has_private_key

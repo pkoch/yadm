@@ -9,3 +9,12 @@ cat .tool-versions  | awk '{print $1}' | xargs -I= asdf plugin-add =
 asdf install
 
 vim '+PlugUpdate' '+PlugClean!' '+qall'
+
+# Require GPG key to be loaded, or abort with instructions.
+if ! has_private_key; then
+  echo 1>&2 '!!! You need the private key loaded to proceed with the rest of the bootstartp.'
+  echo 1>&2 '!!! Get the key in place (make sure it shows up on gpg -K) and run this script again.'
+  exit 1
+fi
+
+(cd secrets && git crypt unlock)
