@@ -8,7 +8,8 @@ yadm submodule update --recursive --init
 cat .tool-versions  | awk '{print $1}' | xargs -I= asdf plugin-add =
 asdf install
 
-vim '+PlugUpdate' '+PlugClean!' '+qall'
+# Make vim not complain about input and output
+script -qc "vim '+PlugUpdate' '+PlugClean"'!'"' '+qall'" /dev/null
 
 # Require GPG key to be loaded, or abort with instructions.
 if ! has_private_key; then
