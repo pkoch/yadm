@@ -2,7 +2,7 @@
 # YADM
 # ====
 # ssh target 'curl https://github.com/pkoch/yadm/blob/master/README.sh | bash'
-set -euo pipefail
+set -xeuo pipefail
 
 cd
 files="$(find . -mindepth 1)"
