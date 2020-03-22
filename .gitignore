@@ -4,6 +4,7 @@ Pictures/
 .bash_history
 .bundle/
 .cache/
+.config/gh/state.yml
 .config/yadm/repo.git/
 .docker/.buildNodeID
 .esd_auth
@@ -12,6 +13,7 @@ Pictures/
 .irb_history
 .joplin/
 .lesshst
+.local/
 .mozilla/
 .node_repl_history
 .npm/
@@ -29,6 +31,3 @@ Pictures/
 .vim/tags/
 .vscode/
 .wget-hsts
-.local/
-#.now/
-#.sentryclirc
