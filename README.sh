@@ -1,7 +1,19 @@
 #!/bin/bash
 # YADM
 # ====
-# ssh target 'wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash'
+# * Setup gpg key (probably from Dropbox)
+# * Setup ssh key (probably from Dropbox)
+# * Setup keyboard (Caps, Compose) 
+# * Setup touchpad scroll direction to natural
+# * ubuntu-drivers install
+# * Instal
+#   * Chromium
+#   * Dropbox
+#   * Firefox
+#   * Joplin (wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash)
+#   * Spotify
+#   * Bitwarden
+# * wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash'
 set -xeuo pipefail
 cd
 
