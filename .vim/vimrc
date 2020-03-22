@@ -1,0 +1,180 @@
+set nocompatible  " Vim, not vi.
+
+if empty(glob("~/.vim/autoload/plug.vim"))
+  silent! execute '!curl --create-dirs -fsSLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * silent! PlugInstall
+endif
+
+silent! if plug#begin()
+
+  Plug 'tpope/vim-sensible'
+
+  Plug 'FooSoft/vim-argwrap'
+  Plug 'LnL7/vim-nix'
+  Plug 'cakebaker/scss-syntax.vim'
+  Plug 'christoomey/vim-sort-motion'
+  Plug 'dag/vim-fish'
+  Plug 'eapache/rainbow_parentheses.vim'
+  Plug 'hashivim/vim-terraform'
+  Plug 'ludovicchabant/vim-gutentags'
+  Plug 'mxw/vim-jsx'
+  Plug 'octref/RootIgnore'
+  Plug 'othree/es.next.syntax.vim'
+  Plug 'othree/yajs.vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'scrooloose/nerdtree'
+  Plug 'slashmili/alchemist.vim'
+  Plug 'tomlion/vim-solidity'
+  Plug 'tpope/vim-abolish'
+  Plug 'tpope/vim-dispatch'
+  Plug 'tpope/vim-eunuch'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-rsi'
+  Plug 'tpope/vim-sleuth'
+  Plug 'w0rp/ale'
+
+  if v:version >= 703
+    Plug 'gorodinskiy/vim-coloresque'
+    Plug 'jamessan/vim-gnupg'
+  endif
+  if v:version >= 704
+    Plug 'vim-pandoc/vim-pandoc-syntax'
+  endif
+
+  call plug#end()
+endif
+
+let g:rbpt_colorpairs = [
+\ ['darkgreen', 'darkgreen'],
+\ ['darkmagenta', 'darkmagenta'],
+\ ['darkyellow', 'darkyellow'],
+\ ['darkblue', 'darkblue'],
+\ ['darkgreen', 'darkgreen'],
+\ ['darkred', 'darkred'],
+\ ['darkgray', 'darkgray'],
+\ ['cyan', 'cyan'],
+\ ['green', 'green'],
+\ ['magenta', 'magenta'],
+\ ['brown', 'brown'],
+\ ['blue', 'blue'],
+\ ['green', 'green'],
+\ ['red', 'red'],
+\ ['gray', 'gray'],
+\ ['white', 'white'],
+\ ]
+
+set autowrite          " Automatically save before commands like :next and :make
+set cursorline         " Highlight current line
+set foldmethod=indent
+set foldlevel=99
+set ignorecase         " Ignore case in search...
+set smartcase          " ... unless we use capital letters.
+set hlsearch           " Highlight search results
+set list               " Show invisibles
+set mouse=a            " Enable mouse usage (in all modes) in terminals
+set showmatch          " Show matching brackets.
+set softtabstop=2 tabstop=2 shiftwidth=2 expandtab " Default whitespace settings
+set wildmode=list:longest
+set completeopt=menu,preview,longest
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+set encoding=utf-8
+let &viminfo .= ',n~/.vim/info'
+if version >= 703
+  set colorcolumn=80     " Vertical line on column 80
+  set undofile           " Persistent undo history
+  set undodir=~/.vim/backup
+endif
+
+
+autocmd FocusLost * silent! wall
+" set clipboard=unnamed " Share paste buffers with OS.
+
+colorscheme elflord
+
+" Suffixes that get lower priority when doing tab completion for filenames.
+" These are files we are not likely to want to edit or read.
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.pyo,.pyc,.rbc
+
+let wildignore = []
+for suffix in split(&suffixes, ',')
+  let wildignore += [ escape(suffix, '.~$') . '$' ]
+endfor
+
+" Retore last edit location when opening a file
+autocmd BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$") | exe "normal g'\"" | exe "normal zz" | endif
+
+" Raibow parens
+au VimEnter * RainbowParenthesesActivate
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+au Syntax * set textwidth=80 formatoptions+=t
+
+let c_space_errors=1
+
+" My pinky finger is never fast enough.
+command! W w
+command! Q q
+command! Qa qa
+command! Wa wa
+command! Wq wq
+
+nnoremap  :cn
+nnoremap  :cn
+
+" Select pasted text
+noremap gp `[v`]`
+
+function! FzyCommand(choice_command, vim_command)
+  try
+    let output = system(a:choice_command . " | fzy ")
+  catch /Vim:Interrupt/
+    " Swallow errors from ^C, allow redraw! below
+  endtry
+  redraw!
+  if v:shell_error == 0 && !empty(output)
+    exec a:vim_command . ' ' . output
+  endif
+endfunction
+
+nnoremap <leader>e :call FzyCommand("rg . -l", ":e")<cr>
+nnoremap <leader>v :call FzyCommand("rg . -l", ":vs")<cr>
+nnoremap <leader>s :call FzyCommand("rg . -l", ":sp")<cr>
+
+" <C-@> is what vim gets when you press Control+Space
+inoremap <C-@> <c-x><c-o>
+
+autocmd FileType elixir let b:argwrap_tail_comma_braces = '[{'
+autocmd FileType ruby let b:argwrap_tail_comma_braces = '[{('
+autocmd FileType javascript let b:argwrap_tail_comma_braces = '[{('
+
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" https://github.com/scrooloose/nerdtree/issues/522
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="-"
+
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'ruby': ['rubocop'],
+\}
+let g:ale_fix_on_save = 1
+let g:ale_open_list = 0
+
+nnoremap <silent> <leader><leader> :ArgWrap<CR>
+
+nnoremap <silent> <leader>/ :nohl<CR>
+
+autocmd BufRead,BufNewFile,BufWritePost * setlocal signcolumn=yes
+autocmd FileType tagbar,nerdtree setlocal signcolumn=no
+autocmd FileType solidity setlocal softtabstop=2 tabstop=2 shiftwidth=2 expandtab
+
+let g:gutentags_cache_dir='~/.vim/tags'
+let g:gutentags_define_advanced_commands = 1
+
+tnoremap  <C-W>N
