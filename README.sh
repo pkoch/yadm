@@ -19,6 +19,6 @@ cd
 
 mkdir bin_install
 export PATH="$PATH:$HOME/bin_install"
-curl -fLo ~/bin_install/yadm https://github.com/TheLocehiliosan/yadm/raw/master/yadm && chmod a+x ~/bin_install/yadm
+wget -qO ~/bin_install/yadm https://github.com/TheLocehiliosan/yadm/raw/master/yadm && chmod a+x ~/bin_install/yadm
 yadm clone --bootstrap https://github.com/pkoch/yadm.git
 rm -rf bin_install
