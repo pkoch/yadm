@@ -17,10 +17,6 @@
 set -xeuo pipefail
 cd
 
-files="$(find . -mindepth 1 -maxdepth 1 -not -name .gnupg | grep -v .ssh/id_)"
-tar czf old_contents.tgz $files
-rm -rf $files
-
 mkdir bin_install
 export PATH="$PATH:$HOME/bin_install"
 curl -fLo ~/bin_install/yadm https://github.com/TheLocehiliosan/yadm/raw/master/yadm && chmod a+x ~/bin_install/yadm
