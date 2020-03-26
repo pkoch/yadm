@@ -9,11 +9,13 @@ chmod 600 .ssh/*
 yadm remote set-url origin "git@github.com:pkoch/yadm.git"
 yadm submodule update --recursive --init
 
-. .profile
+~/.apt.sh || echo 1>&2 '!!! Unable to apt install'
 
 asdf plugin-add gh https://github.com/pkoch/asdf-gh.git
 cat .tool-versions  | awk '{print $1}' | grep -v '^gh$' | xargs -I= asdf plugin-add =
 asdf install
+
+. .profile
 
 # Make vim not complain about input and output
 #script -qc "vim '+PlugUpdate' '+PlugClean"'!'"' '+qall'" /dev/null
