@@ -10,4 +10,6 @@ else
   has_private_key || echo "!!! No local GPG private key found for $MY_GPG_KEY" >&2
 fi
 
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+
 #unset -f has_private_key
