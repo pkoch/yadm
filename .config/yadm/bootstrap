@@ -15,6 +15,8 @@ asdf plugin-add gh https://github.com/pkoch/asdf-gh.git
 cat .tool-versions  | awk '{print $1}' | grep -v '^gh$' | xargs -I= asdf plugin-add =
 asdf install
 
+command -v gpg >/dev/null && gpg --import ~/.gnupg/pubring.asc
+
 . .profile
 
 # Make vim not complain about input and output

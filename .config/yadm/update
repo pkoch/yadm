@@ -1,6 +1,8 @@
 echo Initial state
 yadm status -sb
 
+gpg --export -a > ~/.gnupg/pubring.asc
+
 asdf plugin update --all
 asdf update
 
