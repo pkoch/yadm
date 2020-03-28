@@ -15,7 +15,7 @@
 #   * Spotify
 #   * Bitwarden
 # * wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash
-set -xeuo pipefail
+set -euo pipefail
 cd
 
 mkdir bin_install
