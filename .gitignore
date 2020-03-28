@@ -31,3 +31,5 @@ Pictures/
 .vim/tags/
 .vscode/
 .wget-hsts
+.rustup/
+.cargo/

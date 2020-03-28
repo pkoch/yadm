@@ -3,6 +3,9 @@ yadm status -sb
 
 gpg --export -a > ~/.gnupg/pubring.asc
 
+rustup self update
+rustup update
+
 asdf plugin update --all
 asdf update
 

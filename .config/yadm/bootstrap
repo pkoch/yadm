@@ -11,6 +11,8 @@ yadm submodule update --recursive --init
 
 ~/.apt.sh || echo 1>&2 '!!! Unable to apt install'
 
+curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
+
 asdf plugin-add gh https://github.com/pkoch/asdf-gh.git
 cat .tool-versions  | awk '{print $1}' | grep -v '^gh$' | xargs -I= asdf plugin-add =
 asdf install
