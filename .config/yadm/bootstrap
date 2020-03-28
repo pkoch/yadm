@@ -32,3 +32,5 @@ if ! has_private_key; then
 fi
 
 (cd secrets && git crypt unlock)
+
+date '+%s' > ~/.cache/yadm-update
