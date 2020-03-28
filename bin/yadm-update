@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 cd "$HOME"/.yadm-project
 git fap
 git co master
