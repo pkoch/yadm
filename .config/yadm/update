@@ -1,0 +1,10 @@
+echo Initial state
+yadm status -sb
+
+asdf plugin update --all
+asdf update
+
+bin/yadm-update
+
+echo Final state
+yadm status -sb
