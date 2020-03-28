@@ -11,9 +11,10 @@
 #   * Dropbox
 #   * Firefox
 #   * Joplin (wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash)
+#   * Skype
 #   * Spotify
 #   * Bitwarden
-# * wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash'
+# * wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash
 set -xeuo pipefail
 cd
 
