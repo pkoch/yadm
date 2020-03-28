@@ -1,6 +1,6 @@
-[ -r /etc/bashrc ] && . /etc/bashrc
-
 if ! [ -z "$MYBASHRCSOURCED" ]; then  return; else MYBASHRCSOURCED="Y"; fi
+
+[ -r /etc/bashrc ] && . /etc/bashrc
 
 case $- in
   *i*) ;; # Interactive, keep processing
