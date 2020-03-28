@@ -1,6 +1,7 @@
 echo Initial state
 yadm status -sb
 
+gpg --import ~/.gnupg/pubring.asc
 gpg --export -a > ~/.gnupg/pubring.asc
 
 rustup self update
