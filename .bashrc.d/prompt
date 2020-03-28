@@ -1,0 +1,1 @@
+export PS1="\$(old_ret=\$?; if [ \$old_ret != '0' ]; then echo '⚠️  ' \$old_ret ; echo '\n'; fi)\$(if [ \$(yadm status -s | wc -l) != '0' ]; then echo '🏠 ' \$(yadm status -s | wc -l) ; echo '\n'; fi)\$(date --iso=seconds)\n\u@\h:\W\n\$ "
