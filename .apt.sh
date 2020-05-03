@@ -2,6 +2,7 @@
 sudo apt update
 
 sudo apt install \
+  chrome-gnome-shell \
   curl \
   git \
   git-crypt \
@@ -32,4 +33,3 @@ sudo apt install \
   xz-utils \
   zlib1g-dev \
 ;
-# chrome-gnome-shell
