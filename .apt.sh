@@ -2,13 +2,13 @@
 sudo apt update
 
 sudo apt install \
+  curl \
   git \
   git-crypt \
-  vim \
   htop \
   ripgrep \
   tree \
-  curl \
+  vim \
 ;
 
 # asdf Python
