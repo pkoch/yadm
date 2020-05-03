@@ -1,6 +1,9 @@
 #!/bin/bash
 sudo apt update
 
+sudo rm -f /etc/apt/sources.list.d/swi-prolog-ubuntu-*
+sudo apt-add-repository -y ppa:swi-prolog/devel
+
 sudo apt install \
   chrome-gnome-shell \
   curl \
@@ -8,6 +11,7 @@ sudo apt install \
   git-crypt \
   htop \
   ripgrep \
+  swi-prolog-nox \
   tree \
   vim \
 ;
