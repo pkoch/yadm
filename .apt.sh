@@ -11,7 +11,7 @@ sudo apt install \
   git-crypt \
   htop \
   ripgrep \
-  swi-prolog-nox \
+  swi-prolog \
   tree \
   vim \
 ;
