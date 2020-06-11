@@ -5,15 +5,13 @@
 # * Setup ssh key (probably from Dropbox)
 # * Setup keyboard (Caps, Compose) 
 # * Setup touchpad scroll direction to natural
-# * ubuntu-drivers install
+# * sudo ubuntu-drivers install
 # * Instal
 #   * Chromium
 #   * Dropbox
 #   * Firefox
-#   * Joplin (wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash)
 #   * Skype
 #   * Spotify
-#   * Bitwarden
 # * wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash
 set -euo pipefail
 cd
