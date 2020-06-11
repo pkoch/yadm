@@ -31,7 +31,6 @@ sudo apt install \
   libssl-dev \
   llvm \
   make \
-  python-openssl \
   tk-dev \
   wget \
   xz-utils \
