@@ -6,6 +6,6 @@ if ! [ -r "$HOME/.cache/yadm-update" ]; then
 fi
 
 if ! [ "$(date --date '7 days ago' '+%s')" -lt "$(cat "$HOME/.cache/yadm-update")" ]; then
-  echo >&2 '! .config/yadm/update # Time has come.'
+  echo >&2 '.config/yadm/update # Time has come.'
   return 1
 fi
