@@ -1,11 +1,11 @@
 #!/bin/bash
 if ! [ -r "$HOME/.cache/yadm-update" ]; then
   echo >&2 '! No yadm-update file. You seem to not have finished the bootstrap.'
-  echo >&2 '! Run `. .config/yadm/bootstrap` to fix this.'
+  echo >&2 '! Run `. ~/.config/yadm/bootstrap` to fix this.'
   return 1
 fi
 
 if ! [ "$(date --date '7 days ago' '+%s')" -lt "$(cat "$HOME/.cache/yadm-update")" ]; then
-  echo >&2 '.config/yadm/update # Time has come.'
+  echo >&2 '~/.config/yadm/update # Time has come.'
   return 1
 fi
