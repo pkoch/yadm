@@ -1,8 +1,8 @@
 #!/bin/bash
 # YADM
 # ====
-# * Setup gpg key (probably from Dropbox)
-# * Setup ssh key (probably from Dropbox)
+# * Setup gpg key (gpg -d ~/Dropbox/gpg_keys.asc | gpg --import)
+# * Setup ssh key (mkdir -p ~/.ssh; gpg -d ~/Dropbox/id_rsa.asc > .ssh/id_rsa && chmod 400 .ssh/id_rsa)
 # * Setup keyboard (Caps, Compose) 
 # * Setup touchpad scroll direction to natural
 # * sudo ubuntu-drivers install
