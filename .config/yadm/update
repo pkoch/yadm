@@ -16,7 +16,7 @@ rustup update
 asdf plugin update --all
 asdf update
 
-bin/yadm-update
+~/bin/yadm-update
 
 echo Final state
 yadm status -sb
