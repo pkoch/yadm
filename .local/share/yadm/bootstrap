@@ -31,4 +31,4 @@ fi
 
 (cd secrets && git crypt unlock)
 
-. ~/.config/yadm/update
+. ~/.local/share/yadm/update
