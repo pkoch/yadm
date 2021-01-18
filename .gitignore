@@ -5,7 +5,6 @@ Pictures/
 .bundle/
 .cache/
 .config/gh/state.yml
-.config/yadm/repo.git/
 .docker/.buildNodeID
 .esd_auth
 .gnome/apps/chrome-*.desktop
