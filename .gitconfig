@@ -54,14 +54,6 @@
 	conflictStyle = diff3
 	stat = False
 
-[mergetool]
-	prompt = false
-	keepBackup = false
-	tool = kdiff3
-
-[mergetool "kdiff3"]
-	cmd = kdiff3 $BASE $LOCAL $REMOTE -o $MERGED
-
 [rebase]
 	autosquash = true
 
