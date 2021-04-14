@@ -8,6 +8,9 @@
 [includeIf "gitdir:~/github.com/trustfractal/"]
 	path = .gitconfig-fractal
 
+[includeIf "gitdir:~/github.com/Doist/"]
+	path = .gitconfig-doist
+
 [core]
 	editor = vim
 	whitespace = trailing-space,space-before-tab,tab-in-indent

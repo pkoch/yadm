@@ -1,0 +1,6 @@
+[user]
+	name = pkoch
+	email = pkoch@doist.com
+	signingkey = pkoch@doist.com
+[commit]
+	gpgsign = true
