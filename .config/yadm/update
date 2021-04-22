@@ -1,4 +1,6 @@
 #!/bin/bash
+yadm gitconfig --unset status.showUntrackedFiles
+
 echo Initial state
 yadm status -sb
 
