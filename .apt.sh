@@ -1,19 +1,20 @@
 #!/bin/bash
-sudo apt update
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages
 
-sudo rm -f /etc/apt/sources.list.d/swi-prolog-ubuntu-*
-sudo apt-add-repository -y ppa:swi-prolog/devel
+sudo apt update
 
 sudo apt install -y \
   curl \
+  gh \
   git \
   git-crypt \
   htop \
   ripgrep \
-  swi-prolog \
   tree \
   vim \
 ;
+
 
 # asdf Python
 sudo apt install -y \
