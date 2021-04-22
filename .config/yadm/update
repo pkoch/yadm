@@ -10,9 +10,6 @@ if command -v gpg >/dev/null; then
   gpg --export-ownertrust | grep -v '^#' > ~/.gnupg/ownertrust
 fi
 
-rustup self update
-rustup update
-
 asdf plugin update --all
 asdf update
 
