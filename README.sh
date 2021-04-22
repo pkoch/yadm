@@ -1,17 +1,15 @@
 #!/bin/bash
 # YADM
 # ====
-# * Setup gpg key (gpg -d ~/Dropbox/gpg_keys.asc | gpg --import)
-# * Setup ssh key (mkdir -p ~/.ssh; gpg -d ~/Dropbox/id_rsa.asc > .ssh/id_rsa && chmod 400 .ssh/id_rsa)
-# * Setup keyboard (Caps, Compose)
-# * Setup touchpad scroll direction to natural
-# * sudo ubuntu-drivers install
 # * Instal
 #   * Chromium
 #   * Dropbox
 #   * Firefox
-#   * Skype
 #   * Spotify
+#   * https://extensions.gnome.org/extension/1162/emoji-selector/
+# * Setup gpg key (gpg -d ~/Dropbox/gpg_keys.asc | gpg --import)
+# * Setup keyboard (Caps, Compose)
+# * sudo ubuntu-drivers install
 # * wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash
 set -euo pipefail
 cd
