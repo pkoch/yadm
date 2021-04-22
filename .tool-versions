@@ -1,6 +1,4 @@
 terraform 0.12.24
-gh 0.7.0
 python 3.8.1
 ruby 2.7.0
 dotnet-core 5.0.200
-hub v2.14.2
