@@ -7,6 +7,9 @@ else
 fi
 echo "after bashrc guard"
 
+. ~/.profile
+echo "after profile delegation"
+
 [ -r /etc/bashrc ] && . /etc/bashrc
 echo "after machine bashrc"
 
@@ -22,9 +25,6 @@ for f in `find ~/.bashrc.d/ -mindepth 1 -readable -not -name '.*' | sort -n`; do
   . "$f"
 done; unset f
 echo "after d folder processing"
-
-. ~/.profile
-echo "after profile delegation"
 
 unset MYBASHRCSOURCED
 echo "after all bashrc"
