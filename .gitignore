@@ -3,6 +3,7 @@
 .cache/
 .cargo/
 .config/autostart/
+.config/Code/
 .config/dconf/
 .config/evolution/
 .config/gh/state.yml
@@ -34,7 +35,7 @@ github.com/
 Pictures/
 .pki/
 .rustup/
-snap/snap-store/*
+snap/
 .sqlite_history
 .ssh/id_?sa*
 .ssh/known_hosts
