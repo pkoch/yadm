@@ -49,3 +49,8 @@ snap/
 .vim/tags/
 .vscode/
 .wget-hsts
+.config/BraveSoftware/
+.config/chromium/
+.config/google-chrome*/
+.config/gsconnect/
+.config/ide.yaml
