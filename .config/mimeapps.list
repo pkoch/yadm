@@ -1,5 +1,8 @@
-
 [Default Applications]
 text/html=chromium_chromium.desktop
 x-scheme-handler/http=chromium_chromium.desktop
 x-scheme-handler/https=chromium_chromium.desktop
+
+[Added Associations]
+x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
+x-scheme-handler/tel=org.gnome.Shell.Extensions.GSConnect.desktop;
