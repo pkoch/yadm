@@ -16,7 +16,6 @@ silent! if plug#begin()
   Plug 'dag/vim-fish'
   Plug 'eapache/rainbow_parentheses.vim'
   Plug 'hashivim/vim-terraform'
-  Plug 'ludovicchabant/vim-gutentags'
   Plug 'mxw/vim-jsx'
   Plug 'octref/RootIgnore'
   Plug 'othree/es.next.syntax.vim'
