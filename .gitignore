@@ -54,3 +54,4 @@ snap/
 .config/google-chrome*/
 .config/gsconnect/
 .config/ide.yaml
+.config/vscode-sqltools/
