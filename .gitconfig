@@ -34,6 +34,7 @@
 	pr = pull --rebase
 	pra = pull --rebase --autostash
 	pff = pull --ff-only
+	pffa = pull --ff-only --autostash
 	pfl = push --force-with-lease
 	fap = fetch --all --prune
 	fp = fetch --prune

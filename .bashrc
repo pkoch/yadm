@@ -21,7 +21,7 @@ case $- in
 esac
 #echo "after interactive check"
 
-for f in `find ~/.bashrc.d/ -mindepth 1 -readable -not -name '.*' | sort -n`; do
+for f in `find ~/.bashrc.d/ -mindepth 1 -not -name '.*' | sort -n`; do
   . "$f"
 done; unset f
 #echo "after d folder processing"

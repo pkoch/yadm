@@ -1,4 +1,4 @@
 terraform 0.12.24
-python 3.8.1
+python 3.8.11
 ruby 2.7.0
 dotnet-core 5.0.200

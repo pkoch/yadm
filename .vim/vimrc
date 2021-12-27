@@ -35,7 +35,6 @@ silent! if plug#begin()
 
   if v:version >= 703
     Plug 'gorodinskiy/vim-coloresque'
-    Plug 'jamessan/vim-gnupg'
   endif
   if v:version >= 704
     Plug 'vim-pandoc/vim-pandoc-syntax'

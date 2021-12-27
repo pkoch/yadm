@@ -10,7 +10,7 @@ fi
 [ -r /etc/profile ] && . /etc/profile
 #echo "after machine profile"
 
-for f in `find ~/.profile.d -mindepth 1 -readable -not -name '.*' | sort -n`; do
+for f in `find ~/.profile.d -mindepth 1 -not -name '.*' | sort -n`; do
     case $- in
       *i*) . "$f" ;;
       *) . "$f" >/dev/null ;;
