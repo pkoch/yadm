@@ -11,6 +11,7 @@
 .config/autostart/
 .config/chromium/
 .config/configstore/nodemon.json
+.config/configstore/update-notifier-npm.json
 .config/dconf/
 .config/evolution/
 .config/exercism/user.json
