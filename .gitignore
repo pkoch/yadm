@@ -34,6 +34,7 @@
 .dropbox-dist/
 .dropbox/
 .esd_auth
+.fnm/
 .gnome/apps/chrome-*.desktop
 .gnupg/
 .ipython/
