@@ -17,7 +17,6 @@ silent! if plug#begin()
   Plug 'eapache/rainbow_parentheses.vim'
   Plug 'hashivim/vim-terraform'
   Plug 'mxw/vim-jsx'
-  Plug 'octref/RootIgnore'
   Plug 'othree/es.next.syntax.vim'
   Plug 'othree/yajs.vim'
   Plug 'pangloss/vim-javascript'

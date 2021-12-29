@@ -1,5 +1,8 @@
+.CFUserTextEncoding
+.DS_Store
 .Trash/
 .bash_history
+.bash_sessions/
 .bundle/
 .cache/
 .cargo/
@@ -7,8 +10,10 @@
 .config/Code/
 .config/autostart/
 .config/chromium/
+.config/configstore/nodemon.json
 .config/dconf/
 .config/evolution/
+.config/exercism/user.json
 .config/gh/state.yml
 .config/gnome-initial-setup-done
 .config/google-chrome*/
@@ -16,12 +21,14 @@
 .config/gtk-3.0/
 .config/ibus/
 .config/ide.yaml
+.config/iterm2
 .config/pulse/
 .config/update-notifier/
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/vscode-sqltools/
 .dbus/
+.docker/
 .docker/.buildNodeID
 .dotnet/
 .dropbox-dist/
@@ -29,7 +36,9 @@
 .esd_auth
 .gnome/apps/chrome-*.desktop
 .gnupg/
+.ipython/
 .irb_history
+.iterm2_shell_integration.bash
 .joplin/
 .lesshst
 .local/
@@ -37,6 +46,11 @@
 .node_repl_history
 .npm/
 .pki/
+.pscale/
+.pteid-ng/
+.pyenv/
+.pylint.d/
+.python_history
 .rustup/
 .sqlite_history
 .ssh/id_?sa*
@@ -65,9 +79,5 @@ Public/
 Syncthing/
 gist.github.com/
 github.com/
+go/
 snap/
-.pylint.d/
-.pscale/
-.CFUserTextEncoding
-.DS_Store
-.bash_sessions/
