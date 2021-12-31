@@ -74,3 +74,6 @@
 
 [init]
 	defaultBranch = master
+
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs

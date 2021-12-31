@@ -7,3 +7,5 @@ x-scheme-handler/mailto=chromium_chromium.desktop
 [Added Associations]
 x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
 x-scheme-handler/tel=org.gnome.Shell.Extensions.GSConnect.desktop;
+video/quicktime=vlc_vlc.desktop;
+application/json=code_code.desktop;
