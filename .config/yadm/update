@@ -12,9 +12,6 @@ if command -v gpg >/dev/null; then
   gpg --export-ownertrust | grep -v '^#' > ~/.gnupg/ownertrust
 fi
 
-asdf plugin update --all
-asdf update
-
 ~/bin/yadm-update
 
 echo Final state
