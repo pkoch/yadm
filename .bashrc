@@ -13,6 +13,7 @@ fi
 [ -r /etc/bashrc ] && . /etc/bashrc
 #echo "after machine bashrc"
 
+unset MYBASHRCSOURCED
 case $- in
   *i*) ;; # Interactive, keep processing
   *)
@@ -25,6 +26,3 @@ for f in `find ~/.bashrc.d/ -mindepth 1 -not -name '.*' | sort -n`; do
   . "$f"
 done; unset f
 #echo "after d folder processing"
-
-unset MYBASHRCSOURCED
-#echo "after all bashrc"
