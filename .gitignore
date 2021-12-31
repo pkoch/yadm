@@ -28,6 +28,8 @@
 .config/iterm2
 .config/libreoffice/
 .config/pulse/
+.config/syncthing/
+.config/systemd/
 .config/totem/
 .config/update-notifier/
 .config/user-dirs.dirs
