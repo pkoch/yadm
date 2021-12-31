@@ -36,7 +36,7 @@
 	pff = pull --ff-only
 	pffa = pull --ff-only --autostash
 	pfl = push --force-with-lease
-	fap = fetch --all --prune
+	fap = fetch --all --tags --prune
 	fp = fetch --prune
 	lsf = ls-files --exclude-standard -o -c
 
