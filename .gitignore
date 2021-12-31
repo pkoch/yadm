@@ -13,8 +13,11 @@
 .config/configstore/nodemon.json
 .config/configstore/update-notifier-npm.json
 .config/dconf/
+.config/enchant/
+.config/eog/
 .config/evolution/
 .config/exercism/user.json
+.config/gedit/
 .config/gh/state.yml
 .config/gnome-initial-setup-done
 .config/google-chrome*/
@@ -23,7 +26,9 @@
 .config/ibus/
 .config/ide.yaml
 .config/iterm2
+.config/libreoffice/
 .config/pulse/
+.config/totem/
 .config/update-notifier/
 .config/user-dirs.dirs
 .config/user-dirs.locale
