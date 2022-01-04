@@ -1,0 +1,4 @@
+export DENO_INSTALL="/home/pkoch/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+export DVM_DIR="/home/pkoch/.dvm"
+export PATH="$DVM_DIR/bin:$PATH"

@@ -36,11 +36,13 @@
 .config/user-dirs.locale
 .config/vscode-sqltools/
 .dbus/
+.deno/
 .docker/
 .docker/.buildNodeID
 .dotnet/
 .dropbox-dist/
 .dropbox/
+.dvm/
 .esd_auth
 .fnm/
 .gnome/apps/chrome-*.desktop
