@@ -88,6 +88,7 @@ Music/
 Pictures/
 Public/
 Syncthing/
+__pycache__/
 gist.github.com/
 github.com/
 go/
