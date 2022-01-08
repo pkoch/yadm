@@ -1,0 +1,7 @@
+full_status="$(yadm -c color.status=always status -sb)"
+status="$(cat - <<<$full_status | sed '1d' | cut -c1-20 | sed 's/^/|/' | sed 's/\".*//' | sed 's/ [.A-Za-z0-9/_-]*$/|/' | sed 's/^ \*//' | sort | uniq -c | sed 's/^ \+//' | paste -sd ' ' -)"
+branch_lag="$(cat - <<<$full_status | head -n 1 | cut -d' ' -f3-)"
+
+if [ "${status}${branch_lag}" != '' ]; then
+  echo "🏠 $status $branch_lag"
+fi
