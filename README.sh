@@ -12,6 +12,9 @@
 # * Setup keyboard (Caps, Compose)
 # * sudo ubuntu-drivers install
 # * wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash
+#
+# http://mywiki.wooledge.org/DotFiles
+
 set -euo pipefail
 cd
 
