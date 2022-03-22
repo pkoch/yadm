@@ -43,6 +43,7 @@
 .dropbox-dist/
 .dropbox/
 .dvm/
+.ecr/
 .esd_auth
 .fnm/
 .gnome/apps/chrome-*.desktop
@@ -75,6 +76,7 @@
 .vim/plugged/
 .vim/swap/
 .vim/tags/
+.vscode-server/
 .vscode/
 .wget-hsts
 Applications/
