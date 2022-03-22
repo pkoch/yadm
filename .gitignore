@@ -10,6 +10,7 @@
 .config/Code/
 .config/autostart/
 .config/chromium/
+.config/configstore/
 .config/configstore/nodemon.json
 .config/configstore/update-notifier-npm.json
 .config/dconf/
