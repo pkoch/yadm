@@ -59,6 +59,7 @@
 .node_repl_history
 .npm/
 .pki/
+.poreidcache/
 .pscale/
 .pteid-ng/
 .pyenv/
