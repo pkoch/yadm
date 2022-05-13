@@ -8,6 +8,7 @@
 #   * Spotify
 #   * https://extensions.gnome.org/extension/1162/emoji-selector/
 #   * VS Code
+#   * pass
 # * Setup gpg key (gpg -d ~/Dropbox/gpg_keys.asc | gpg --import)
 # * Setup keyboard (Caps, Compose)
 # * sudo ubuntu-drivers install
