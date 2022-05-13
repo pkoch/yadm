@@ -4,3 +4,6 @@
 [submodule "secrets"]
 	path = secrets
 	url = git@github.com:pkoch/secrets.git
+[submodule ".password-store"]
+	path = .password-store
+	url = git@github.com:pkoch/password-store.git
