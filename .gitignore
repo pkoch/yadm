@@ -28,6 +28,7 @@
 .config/ide.yaml
 .config/iterm2
 .config/libreoffice/
+.config/monitors.xml
 .config/pulse/
 .config/syncthing/
 .config/systemd/
@@ -58,7 +59,9 @@
 .mozilla/
 .node_repl_history
 .npm/
+.nvidia-settings-rc
 .pki/
+.poetry/
 .poreidcache/
 .pscale/
 .pteid-ng/
