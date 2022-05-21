@@ -1,1 +1,3 @@
-export BW_SESSION="$(pass BW_SESSION)"
+# This felt like a good idea, but it mean I get asked for my
+# gpg passphrase on every shell. :/
+#export BW_SESSION="$(pass BW_SESSION)"
