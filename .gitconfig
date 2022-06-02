@@ -8,9 +8,6 @@
 [includeIf "gitdir:~/github.com/trustfractal/"]
 	path = .gitconfig-fractal
 
-[includeIf "gitdir:~/github.com/Doist/"]
-	path = .gitconfig-doist
-
 [core]
 	editor = vim
 	whitespace = trailing-space,space-before-tab,tab-in-indent
@@ -69,6 +66,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
 [pull]
 	rebase = false
 
@@ -77,6 +75,7 @@
 
 [blame]
 	ignoreRevsFile = .git-blame-ignore-revs
+
 [submodule]
 	recurse = true
 [rerere]
