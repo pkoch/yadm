@@ -1,0 +1,2 @@
+#!/bin/bash
+poetry completions bash > ~/.bashrc.d/poetry
