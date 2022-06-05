@@ -342,3 +342,4 @@ image/x-sony-srf=shotwell-viewer.desktop;
 image/x-sr2=shotwell-viewer.desktop;
 image/x-srf=shotwell-viewer.desktop;
 image/x-x3f=shotwell-viewer.desktop;
+application/vnd.debian.binary-package=gnome-software-local-file.desktop;
