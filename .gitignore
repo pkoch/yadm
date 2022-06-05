@@ -84,6 +84,7 @@
 .vscode-server/
 .vscode/
 .wget-hsts
+.zoom/
 Applications/
 Desktop/
 Documents/
