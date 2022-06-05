@@ -1,20 +1,18 @@
-#!/bin/bash
-yadm gitconfig --unset status.showUntrackedFiles
+#!/usr/bin/env bash
 
-echo Initial state
+message(){
+  echo -e "\e[34m"$@"\e[0m"
+}
+
+message '# Initial state'
 yadm status -sb
 
-if command -v gpg >/dev/null; then
-  gpg --import ~/.gnupg/pubring.asc
-  gpg --export -a > ~/.gnupg/pubring.asc
+for f in `find .config/yadm/update.d/ -mindepth 1 -not -name '.*' | sort -n`; do
+  message "# $f"
+  "$f"
+done; unset f
 
-  gpg --import-ownertrust ~/.gnupg/ownertrust
-  gpg --export-ownertrust | grep -v '^#' > ~/.gnupg/ownertrust
-fi
-
-~/bin/yadm-update
-
-echo Final state
+message '# Final state'
 yadm status -sb
 
 date '+%s' > ~/.cache/yadm-update

@@ -1,6 +1,0 @@
-#!/bin/bash
-set -e
-cd "$HOME"/.yadm-project
-git fap
-git co master
-git reset --hard "$(git tag | sort -n | tail -n 1)"
