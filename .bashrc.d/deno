@@ -1,0 +1,1 @@
+command -v deno >/dev/null && . <(deno completions bash)

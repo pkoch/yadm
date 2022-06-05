@@ -1,1 +1,1 @@
-. <(fnm completions)
+command -v fnm >/dev/null && . <(fnm completions)
