@@ -7,7 +7,7 @@ message(){
 message '# Initial state'
 yadm status -sb
 
-for f in `find .config/yadm/update.d/ -mindepth 1 -not -name '.*' | sort -n`; do
+for f in `find .config/yadm/update.d -mindepth 1 -not -name '.*' | sort -n`; do
   message "# $f"
   "$f"
 done; unset f
