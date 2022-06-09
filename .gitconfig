@@ -1,6 +1,7 @@
 [user]
 	name = Paulo Köch
 	email = paulo.koch@gmail.com
+	signingKey = F6B4B93498A0C85D
 
 [includeIf "gitdir:~/github.com/lifeonmarspt/"]
 	path = .gitconfig-lom
@@ -80,3 +81,5 @@
 	recurse = true
 [rerere]
 	enabled = true
+[commit]
+	gpgSign = true
