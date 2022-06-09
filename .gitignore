@@ -4,6 +4,7 @@
 .bash_history
 .bash_sessions/
 .bashrc.d/.poetry.cached
+.bashrc.d/.ykman.cached
 .bundle/
 .cache/
 .cargo/

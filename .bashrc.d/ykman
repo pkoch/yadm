@@ -1,0 +1,5 @@
+if [ ! -f ~/.bashrc.d/.ykman.cached ]
+then
+  ~/.config/yadm/update.d/ykman-completion
+fi
+. ~/.bashrc.d/.ykman.cached

@@ -1,0 +1,2 @@
+#!/bin/bash
+_YKMAN_COMPLETE=bash_source ykman > ~/.bashrc.d/.ykman.cached
