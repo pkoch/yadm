@@ -86,6 +86,7 @@
 .vscode-server/
 .vscode/
 .wget-hsts
+.wrangler/version.toml
 .zoom/
 Applications/
 Desktop/
