@@ -8,10 +8,12 @@
 .bundle/
 .cache/
 .cargo/
+.config/.gsd-keyboard.settings-ported
 .config/BraveSoftware/
 .config/Code/
 .config/autostart/
 .config/chromium/
+.config/cni
 .config/configstore/
 .config/configstore/nodemon.json
 .config/configstore/update-notifier-npm.json
@@ -50,6 +52,7 @@
 .ecr/
 .esd_auth
 .fnm/
+.gem/
 .gnome/apps/chrome-*.desktop
 .gnupg/
 .ipython/
@@ -70,12 +73,18 @@
 .pyenv/
 .pylint.d/
 .python_history
+.rbenv/
 .rustup/
+.solargraph/
 .sqlite_history
 .ssh/id_?sa*
 .ssh/known_hosts
+.steam/
+.steampath
+.steampid
 .sudo_as_admin_successful
 .terraform.d/
+.ts_node_repl_history
 .var/
 .vim/.netrwhist
 .vim/backup/
@@ -87,6 +96,7 @@
 .vscode/
 .wget-hsts
 .wrangler/version.toml
+.yarnrc
 .zoom/
 Applications/
 Desktop/
