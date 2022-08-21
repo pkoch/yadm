@@ -23,6 +23,7 @@
 .config/evolution/
 .config/exercism/user.json
 .config/flipperdevices.com
+.config/gatsby/
 .config/gedit/
 .config/gh/state.yml
 .config/gnome-initial-setup-done
