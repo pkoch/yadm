@@ -11,6 +11,7 @@ fi
 #echo "after machine profile"
 
 for f in `find ~/.profile.d -mindepth 1 -not -name '.*' | sort -n`; do
+    echo "profile sourcing $f"
     case $- in
       *i*) . "$f" ;;
       *) . "$f" >/dev/null ;;
