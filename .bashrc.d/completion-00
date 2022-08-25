@@ -1,10 +1,10 @@
 function maybe_regen_and_source_completion() {
     BIN_NAME="$1"
 
-    if [ ! -f "~/.bashrc.d/.$BIN_NAME.cached" ]
+    if [ ! -f "$HOME/.bashrc.d/.$BIN_NAME.cached" ]
     then
-        "~/.config/yadm/update.d/completion-$BIN_NAME"
+        "$HOME/.config/yadm/update.d/completion-$BIN_NAME"
     fi
 
-    . "~/.bashrc.d/.$BIN_NAME.cached"
+    . "$HOME/.bashrc.d/.$BIN_NAME.cached"
 }
