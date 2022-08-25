@@ -118,10 +118,8 @@ command! Qa qa
 command! Wa wa
 command! Wq wq
 
-nnoremap
- :cn
-nnoremap
- :cn
+nnoremap  :cn
+nnoremap  :cn
 
 " Select pasted text
 noremap gp `[v`]`
