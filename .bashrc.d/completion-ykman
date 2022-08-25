@@ -1,1 +1,1 @@
-maybe_regen_and_source_completion "ykman"
+maybe_regen_and_source_completion "ykman" "_YKMAN_COMPLETE=bash_source ykman"

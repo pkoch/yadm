@@ -1,10 +1,18 @@
-function maybe_regen_and_source_completion() {
+function maybe_regen_and_source_completion {
     BIN_NAME="$1"
+    REGEN_SCRIPT="$2"
 
-    if [ ! -f "$HOME/.bashrc.d/.$BIN_NAME.cached" ]
+    CACHE_FILE="$HOME/.bashrc.d/.$BIN_NAME.cached"
+
+    if ! command -v "$BIN_NAME" >/dev/null
     then
-        "$HOME/.config/yadm/update.d/completion-$BIN_NAME"
+        return
     fi
 
-    . "$HOME/.bashrc.d/.$BIN_NAME.cached"
+    if [ ! -f "$CACHE_FILE" ] || [ ! -z "${FORCE_COMPLETION_REGEN:-}" ]
+    then
+        bash -c "$REGEN_SCRIPT" > "$CACHE_FILE"
+    fi
+
+    . "$CACHE_FILE"
 }

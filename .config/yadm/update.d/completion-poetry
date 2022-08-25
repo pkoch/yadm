@@ -1,2 +1,0 @@
-#!/bin/bash
-command -v poetry >/dev/null && poetry completions bash > ~/.bashrc.d/.poetry.cached

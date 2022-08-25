@@ -3,8 +3,7 @@
 .Trash/
 .bash_history
 .bash_sessions/
-.bashrc.d/.poetry.cached
-.bashrc.d/.ykman.cached
+.bashrc.d/.*.cached
 .bundle/
 .cache/
 .cargo/

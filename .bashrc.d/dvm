@@ -1,1 +1,0 @@
-command -v dvm >/dev/null && . <(dvm completions bash)
