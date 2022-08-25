@@ -1,5 +1,0 @@
-if [ ! -f ~/.bashrc.d/.poetry.cached ]
-then
-  ~/.config/yadm/update.d/poetry-completion
-fi
-. ~/.bashrc.d/.poetry.cached
