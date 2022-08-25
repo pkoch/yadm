@@ -1,28 +1,38 @@
-#echo "start bashrc $MYBASHRCSOURCED"
+function bashrc_debug() {
+  false && echo "$*"
+}
+
+bashrc_debug "start bashrc $MYBASHRCSOURCED"
+
 if ! [ -z "$MYBASHRCSOURCED" ]; then
-  #echo "bail bashrc recursion"
+  bashrc_debug "bail bashrc recursion"
   return
 else
   export MYBASHRCSOURCED="Y"
 fi
-#echo "after bashrc guard"
+bashrc_debug "after bashrc guard"
 
 . ~/.profile
-#echo "after profile delegation"
+bashrc_debug "after profile delegation"
 
 [ -r /etc/bashrc ] && . /etc/bashrc
-#echo "after machine bashrc"
+bashrc_debug "after machine bashrc"
 
 unset MYBASHRCSOURCED
 case $- in
-  *i*) ;; # Interactive, keep processing
+  *i*)
+    bashrc_debug "Interactive, keep processing"
+    ;;
   *)
-    #echo "Not interative, bail bashrc"
+    bashrc_debug "Not interative, bail bashrc"
     return ;;
 esac
-#echo "after interactive check"
+bashrc_debug "after interactive check"
 
 for f in `find ~/.bashrc.d/ -mindepth 1 -not -name '.*' | sort -n`; do
+  bashrc_debug "bashrc sourcing $f"
   . "$f"
 done; unset f
-#echo "after d folder processing"
+bashrc_debug "after d folder processing"
+
+unset -f bashrc_debug

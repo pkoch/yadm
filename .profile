@@ -1,26 +1,33 @@
-#echo "start profile $MYPROFILESOURCED"
+function profile_debug() {
+    false && echo "$*"
+}
+
+profile_debug "start profile $MYPROFILESOURCED"
+
 if ! [ -z "$MYPROFILESOURCED" ]; then
-    #echo "bail profile recursion"
+    profile_debug "bail profile recursion"
     return
 else
     export MYPROFILESOURCED="Y"
 fi
-#echo "after profile guard"
+profile_debug "after profile guard"
 
 [ -r /etc/profile ] && . /etc/profile
-#echo "after machine profile"
+profile_debug "after machine profile"
 
 for f in `find ~/.profile.d -mindepth 1 -not -name '.*' | sort -n`; do
-    echo "profile sourcing $f"
+    profile_debug "profile sourcing $f"
     case $- in
       *i*) . "$f" ;;
       *) . "$f" >/dev/null ;;
     esac
 done; unset f
-#echo "after d folder processing"
+profile_debug "after d folder processing"
 
 . ~/.bashrc
-#echo "after bashrc delegation"
+profile_debug "after bashrc delegation"
 
 unset MYPROFILESOURCED
-#echo "after all profile"
+profile_debug "after all profile"
+
+unset -f profile_debug
