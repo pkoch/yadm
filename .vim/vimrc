@@ -1,7 +1,7 @@
 set nocompatible  " Vim, not vi.
 
 if empty(glob("~/.vim/autoload/plug.vim"))
-  silent! execute '!curl --create-dirs -fsSLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+  silent! execute '!~/.config/yadm/update.d/vim-plug'
   autocmd VimEnter * silent! PlugInstall
 endif
 
@@ -118,8 +118,10 @@ command! Qa qa
 command! Wa wa
 command! Wq wq
 
-nnoremap  :cn
-nnoremap  :cn
+nnoremap
+ :cn
+nnoremap
+ :cn
 
 " Select pasted text
 noremap gp `[v`]`
