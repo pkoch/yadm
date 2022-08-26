@@ -1,15 +1,13 @@
 MY_GPG_KEY="7CF89ADCDA4CB27D18A943E4F6B4B93498A0C85D"
 
-function has_private_key {
-  ! [ "$(gpg -K $MY_GPG_KEY 2>&1)" = "gpg: error reading key: No secret key" ]
-}
-
-if [ -n "$SSH_CLIENT" ]; then
-  has_private_key || echo "!!! No remote GPG private key found for $MY_GPG_KEY" >&2
+if ! [ -e "$(gpgconf --list-dirs agent-socket)" ]
+then
+  echo "!!! No GPG agent socket found" >&2
 else
-  has_private_key || echo "!!! No local GPG private key found for $MY_GPG_KEY" >&2
+  if [ "$(gpg -K $MY_GPG_KEY 2>&1)" = "gpg: error reading key: No secret key" ]
+  then
+    echo "!!! No $([ -n "$SSH_CLIENT" ] && echo "remote" || echo "local") GPG private key found for $MY_GPG_KEY" >&2
+  fi
 fi
 
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-
-unset -f has_private_key
