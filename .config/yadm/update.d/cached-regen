@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 export FORCE_COMPLETION_REGEN=1
 for f in "$HOME"/.bashrc.d/cached-*
 do

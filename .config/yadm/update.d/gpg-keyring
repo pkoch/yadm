@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 if command -v gpg >/dev/null; then
   gpg --import --quiet ~/.gnupg/pubring.asc
   gpg --export -a > ~/.gnupg/pubring.asc
