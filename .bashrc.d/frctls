@@ -1,0 +1,1 @@
+command -v frctls &>/dev/null && source $FRCTLS_WORK_DIR/cli/shell/frctls-completion.sh
