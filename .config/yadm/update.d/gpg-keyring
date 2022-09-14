@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 if command -v gpg >/dev/null; then
   gpg --import --quiet ~/.gnupg/pubring.asc.d/*
-  gpg -k | grep ^pub | awk '{print $2}' | awk -F/ '{print $2}' |  xargs -I= bash -c "gpg --export -a = > .gnupg/pubring.asc.d/="
+  gpg -k | grep ^pub | awk '{print $2}' | awk -F/ '{print $2}' |  xargs -I= bash -c "gpg --export --export-options export-local-sigs -a = > .gnupg/pubring.asc.d/="
 
   gpg --import-ownertrust ~/.gnupg/ownertrust
   gpg --export-ownertrust | grep -v '^#' > ~/.gnupg/ownertrust
