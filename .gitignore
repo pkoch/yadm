@@ -63,13 +63,16 @@ github.com/
 .gnome/apps/chrome-*.desktop
 .gnupg/
 go/
+.gradle/
 .ipython/
 .irb_history
 .iterm2_shell_integration.bash
 .joplin/
+.lemminx/
 .lesshst
 Library/
 .local/
+.m2/
 Movies/
 .mozilla/
 Music/
@@ -89,6 +92,7 @@ __pycache__/
 .pylint.d/
 .python_history
 .rbenv/
+.redhat/
 .rustup/
 snap/
 .solargraph/
