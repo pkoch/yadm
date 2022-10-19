@@ -74,6 +74,7 @@
 .pki/
 .poetry/
 .poreidcache/
+.postgresql/root.crt
 .pscale/
 .psql_history
 .pteid-ng/
