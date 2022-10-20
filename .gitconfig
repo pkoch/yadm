@@ -48,6 +48,7 @@
 
 [push]
 	default = current
+	autoSetupRemote = true
 
 [merge]
 	conflictStyle = diff3
