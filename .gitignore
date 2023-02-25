@@ -79,6 +79,7 @@
 .pscale/
 .psql_history
 .pteid-ng/
+.pulumi/
 .pyenv/
 .pylint.d/
 .python_history

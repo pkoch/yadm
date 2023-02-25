@@ -1,0 +1,2 @@
+POLUMI_PATH="$HOME/.pulumi/bin"
+[ -e "$POLUMI_PATH" ] && export PATH="$PATH:$POLUMI_PATH"
