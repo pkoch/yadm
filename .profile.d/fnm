@@ -1,4 +1,4 @@
-export PATH="$HOME/.fnm:$PATH"
+export PATH="$HOME/.local/share/fnm:$PATH"
 if type fnm &>/dev/null; then
   eval "`fnm env --use-on-cd`"
 fi
