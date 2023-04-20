@@ -34,6 +34,7 @@
 .config/ide.yaml
 .config/iterm2
 .config/libreoffice/
+.config/mimeapps.list
 .config/monitors.xml
 .config/op/config
 .config/pulse/
