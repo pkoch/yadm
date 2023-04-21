@@ -1,6 +1,6 @@
 [user]
 	name = Paulo Köch
-	email = pkoch@frctls.com
-	signingkey = pkoch@frctls.com
+	email = pkoch@fractal.id
+	signingkey = pkoch@fractal.id
 [commit]
 	gpgsign = true
