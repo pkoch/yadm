@@ -1,1 +1,1 @@
-export PS1="\$(old_ret=\$?; if [ \$old_ret != '0' ]; then echo '⚠️  ' \$old_ret ; echo '\n'; fi)\$(date "+%Y/%m/%dT%T%z")\n\u@\h:\w\n\$ "
+export PS1="\$(old_ret=\$?; if [ \$old_ret != '0' ]; then echo '⚠️  ' \$old_ret ; echo '\n'; fi)\$(date "+%Y-%m-%dT%T%z")\n\u@\h:\w\n\$ "
