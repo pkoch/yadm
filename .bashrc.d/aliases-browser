@@ -3,5 +3,5 @@ if [ `uname -s` == 'Darwin' ]; then
   alias defbro-c='defbro com.google.Chrome'
 else
   alias defbro-ff='xdg-settings set default-web-browser firefox.desktop'
-  alias defbro-c='xdg-settings set default-web-browser com.google.Chrome.desktop'
+  alias defbro-c='xdg-settings set default-web-browser chromium-browser.desktop'
 fi
