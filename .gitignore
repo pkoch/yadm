@@ -1,3 +1,10 @@
+!.gnupg/gpg-agent.conf##template
+!.gnupg/gpg.conf
+!.gnupg/ownertrust
+!.gnupg/pubring.asc.d/
+!.gnupg/reset_tty.sh
+!.gnupg/sshcontrol
+Calibre Library/
 .CFUserTextEncoding
 .DS_Store
 .Trash/
@@ -130,9 +137,3 @@ gist.github.com/
 github.com/
 go/
 snap/
-!.gnupg/sshcontrol
-!.gnupg/reset_tty.sh
-!.gnupg/pubring.asc.d/
-!.gnupg/ownertrust
-!.gnupg/gpg.conf
-!.gnupg/gpg-agent.conf##template
