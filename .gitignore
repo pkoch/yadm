@@ -4,7 +4,6 @@
 !.gnupg/pubring.asc.d/
 !.gnupg/reset_tty.sh
 !.gnupg/sshcontrol
-Calibre Library/
 .CFUserTextEncoding
 .DS_Store
 .Trash/
@@ -121,6 +120,7 @@ Calibre Library/
 .yarnrc
 .zoom/
 Applications/
+Calibre Library/
 Desktop/
 Documents/
 Downloads/
