@@ -1,1 +1,2 @@
 test -f /etc/bash_completion && . /etc/bash_completion
+test -e $HOME/.nix-profile/etc/profile.d/bash_completion.sh && . $HOME/.nix-profile/etc/profile.d/bash_completion.sh

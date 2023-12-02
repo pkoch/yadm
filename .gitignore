@@ -76,6 +76,8 @@
 .local/
 .m2/
 .mozilla/
+.nix-defexpr/
+.nix-profile
 .node_repl_history
 .npm/
 .nvidia-settings-rc
