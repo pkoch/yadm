@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 if command -v gpg >/dev/null; then
-  gpg --import-options restore --quiet --import ~/.gnupg/pubring.asc.d/*
   gpg -k | \
     grep ^pub | \
     awk '{print $2}' | \
     awk -F/ '{print $2}' | \
     xargs -I= bash -c "gpg --export-options backup -a --export = > ~/.gnupg/pubring.asc.d/="
+  gpg --import-options restore --quiet --import ~/.gnupg/pubring.asc.d/*
 fi
