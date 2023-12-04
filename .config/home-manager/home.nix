@@ -35,6 +35,7 @@
     git-crypt
     git-lfs
     gnused
+    gnupg
     heroku
     htop
     jq
