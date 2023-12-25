@@ -34,8 +34,8 @@
     git-absorb
     git-crypt
     git-lfs
-    gnused
     gnupg
+    gnused
     heroku
     htop
     jq
@@ -52,6 +52,7 @@
     terraform
     tree
     vim
+    wakeonlan
     watch
     wget
     xxHash
