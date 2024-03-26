@@ -1,5 +1,5 @@
 [user]
-	name = Paulo Köch
+	name = Paulo Koch
 	email = paulo.koch@gmail.com
 	signingKey = F6B4B93498A0C85D
 
@@ -77,9 +77,6 @@
 
 [init]
 	defaultBranch = master
-
-[blame]
-	ignoreRevsFile = .git-blame-ignore-revs
 
 [submodule]
 	recurse = true
