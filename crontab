@@ -1,4 +1,3 @@
 AWS_PROFILE=pkoch-personal
 #mh d m w
 22 * * * * /usr/bin/aws s3 sync --exclude ".dropbox*" ~pkoch/Dropbox s3://pkoch-archive/Dropbox
-22 * * * * /usr/bin/aws s3 sync /media/pkoch/Pictures/ s3://pkoch-pictures/
