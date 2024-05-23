@@ -1,3 +1,4 @@
 AWS_PROFILE=pkoch-personal
 #mh d m w
 22 * * * * /usr/bin/aws s3 sync --exclude ".dropbox*" ~pkoch/Dropbox s3://pkoch-archive/Dropbox
+* * * * * /bin/bash -c "~pkoch/bin/update-bolota-dns.sh"
