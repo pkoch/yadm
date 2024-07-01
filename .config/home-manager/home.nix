@@ -22,7 +22,7 @@
     awscli2
     bash-completion
     bashInteractive
-    bitwarden-cli
+    #bitwarden-cli
     curl
     deno
     docker-credential-gcr
@@ -48,6 +48,7 @@
     pv
     ripgrep
     sentry-cli
+    shellcheck
     stgit
     terraform
     tree
@@ -58,7 +59,7 @@
     xxHash
     xz
     yq
-    yubikey-manager4
+    yubikey-manager
     zstd
 
     # TODO: package https://github.com/jwbargsten/defbro
