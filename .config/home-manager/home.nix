@@ -44,6 +44,7 @@
     openssh
     pass
     postgresql
+    pre-commit
     psutils
     pv
     ripgrep
