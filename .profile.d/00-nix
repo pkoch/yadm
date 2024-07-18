@@ -2,8 +2,16 @@ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
     . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
 fi
 
+if [ -e "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
+    . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+fi
+
 # TODO: I don't know why this was ending at the end of PATH, but I want it
 # near the start.
 if [ -e "$HOME/.nix-profile" ]; then
   export PATH="$HOME/.nix-profile/bin:$PATH"
+fi
+
+if [ -e /etc/static/bashrc ]; then
+  . /etc/static/bashrc
 fi

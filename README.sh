@@ -31,6 +31,7 @@
 # * Setup keyboard (Caps, Compose)
 # * Install drivers (sudo ubuntu-drivers install)
 # * Show weeks in calendar
+# * https://install.determinate.systems/
 # * wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash
 #
 # http://mywiki.wooledge.org/DotFiles
