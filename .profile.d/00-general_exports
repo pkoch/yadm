@@ -6,3 +6,4 @@ export PATH="$HOME/bin:$PATH"
 export LESS="-SFRXx4"
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export BASH_SILENCE_DEPRECATION_WARNING=1  # macOS
+export LANG="en_US.UTF-8"
