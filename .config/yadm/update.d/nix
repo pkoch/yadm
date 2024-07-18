@@ -10,5 +10,5 @@ echo_run nix flake update ~/.config/nix-darwin
 echo_run darwin-rebuild changelog
 echo_run darwin-rebuild switch --flake ~/.config/nix-darwin
 
-echo_run nix flake update /Users/pkoch/.config/home-manager
+echo_run nix flake update ~/.config/home-manager
 echo_run home-manager switch
