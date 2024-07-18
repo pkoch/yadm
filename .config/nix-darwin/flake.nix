@@ -41,6 +41,8 @@
         name = "pkoch";
         home = "/Users/pkoch";
       };
+
+      security.pam.enableSudoTouchIdAuth = true;
     };
   in
   {
