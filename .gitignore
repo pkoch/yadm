@@ -51,6 +51,7 @@
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/vscode-sqltools/
+.config/yarn/
 .cups/
 .dbus/
 .deno/
@@ -76,12 +77,16 @@
 .local/
 .m2/
 .mozilla/
+.near-config/
+.near-credentials/
 .nix-defexpr/
 .nix-profile
 .node_repl_history
 .npm/
 .nvidia-settings-rc
 .pki/
+.pnpm-state/
+.pnpm-store/
 .poetry/
 .poreidcache/
 .postgresql/root.crt
@@ -105,6 +110,7 @@
 .steampath
 .steampid
 .sudo_as_admin_successful
+.talon/
 .terraform.d/
 .ts_node_repl_history
 .vagrant.d/
@@ -115,12 +121,18 @@
 .vim/plugged/
 .vim/swap/
 .vim/tags/
+.vite-plugin-mkcert/
 .vscode-server/
 .vscode/
 .wget-hsts
+.wrangler/logs/
+.wrangler/metrics.json
 .wrangler/version.toml
+.yarn/
 .yarnrc
+.zcompdump
 .zoom/
+.zsh_history
 Applications/
 Calibre Library/
 Desktop/
