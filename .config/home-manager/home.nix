@@ -4,7 +4,7 @@
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "pkoch";
-  home.homeDirectory = "/Users/pkoch";
+  home.homeDirectory = "/home/pkoch";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -34,14 +34,14 @@
     git-absorb
     git-crypt
     git-lfs
-    gnupg
+    #gnupg
     gnused
     heroku
     htop
     jq
     lz4
     nmap
-    openssh
+    #openssh
     pass
     postgresql
     pre-commit
