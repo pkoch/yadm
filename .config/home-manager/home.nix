@@ -40,6 +40,7 @@
     htop
     jq
     lz4
+    neovim
     nmap
     #openssh
     pass
