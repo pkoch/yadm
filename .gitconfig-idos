@@ -1,0 +1,6 @@
+[user]
+	name = Paulo Koch
+	email = pkoch@idos.network
+	signingkey = pkoch@idos.network
+[commit]
+	gpgsign = true

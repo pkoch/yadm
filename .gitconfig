@@ -10,7 +10,7 @@
 	path = .gitconfig-fractal
 
 [includeIf "gitdir:~/github.com/idos-network/"]
-	path = .gitconfig-fractal
+	path = .gitconfig-idos
 
 [core]
 	editor = vim
