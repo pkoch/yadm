@@ -12,5 +12,5 @@ if [ "$(uname)" = "Darwin" ]; then
   echo_run darwin-rebuild switch --flake ~/.config/nix-darwin
 fi
 
-echo_run nix flake update ~/.config/home-manager
+echo_run nix flake update --flake ~/.config/home-manager
 echo_run home-manager switch
