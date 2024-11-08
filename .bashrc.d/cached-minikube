@@ -1,0 +1,1 @@
+maybe_regen_and_source_completion "minikube" "minikube completion bash"
