@@ -1,3 +1,4 @@
+alias vim=nvim
 alias y=yadm
 alias ls='ls -GFhb'
 alias la='ls -a'

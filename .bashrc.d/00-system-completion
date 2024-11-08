@@ -1,2 +1,6 @@
 test -f /etc/bash_completion && . /etc/bash_completion
 test -e $HOME/.nix-profile/etc/profile.d/bash_completion.sh && . $HOME/.nix-profile/etc/profile.d/bash_completion.sh
+
+for f in `find /opt/homebrew/etc/bash_completion.d -mindepth 1 -not -name '.*' | sort -n`; do
+	. "$f"
+done; unset f
