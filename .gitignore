@@ -23,6 +23,7 @@
 .config/configstore/
 .config/configstore/nodemon.json
 .config/configstore/update-notifier-npm.json
+.config/containers/
 .config/dconf/
 .config/enchant/
 .config/eog/
@@ -151,3 +152,5 @@ gist.github.com/
 github.com/
 go/
 snap/
+.kube/
+.config/helm/
