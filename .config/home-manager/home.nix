@@ -40,6 +40,7 @@
     htop
     jq
     lz4
+    minikube
     neovim
     nmap
     #openssh
