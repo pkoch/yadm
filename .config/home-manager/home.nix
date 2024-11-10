@@ -45,6 +45,8 @@
     nmap
     #openssh
     pass
+    podman
+    podman-compose
     postgresql
     pre-commit
     psutils

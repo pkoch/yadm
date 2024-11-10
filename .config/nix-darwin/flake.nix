@@ -22,11 +22,7 @@
         package = pkgs.nix;
         gc.automatic = true;
         optimise.automatic = true;
-        settings = {
-          # Necessary for using flakes on this system.
-          auto-optimise-store = true;
-          experimental-features = "nix-command flakes";
-        };
+        settings.experimental-features = "nix-command flakes";
       };
 
       # Create /etc/zshrc that loads the nix-darwin environment.
