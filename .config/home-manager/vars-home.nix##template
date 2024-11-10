@@ -1,0 +1,5 @@
+{% if yadm.os == "Darwin" %}
+"/Users/pkoch"
+{% else %}
+"/home/pkoch"
+{% endif %}
