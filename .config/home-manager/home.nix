@@ -36,7 +36,6 @@
     git-lfs
     #gnupg
     gnused
-    heroku
     htop
     jq
     lz4
