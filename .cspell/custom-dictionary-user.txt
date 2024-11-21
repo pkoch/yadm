@@ -13,6 +13,7 @@ databall
 datapoints
 datawarehouse
 datetime
+deployers
 dids
 encrypter
 etag
