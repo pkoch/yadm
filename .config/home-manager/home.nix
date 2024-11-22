@@ -27,7 +27,6 @@
     deno
     docker-credential-gcr
     entr
-    ffmpeg
     gh
     gist
     git
@@ -46,13 +45,11 @@
     podman
     podman-compose
     postgresql
-    pre-commit
     psutils
     pv
     ripgrep
     sentry-cli
     shellcheck
-    stgit
     terraform
     tree
     vim
