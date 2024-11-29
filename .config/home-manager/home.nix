@@ -50,6 +50,7 @@
     ripgrep
     sentry-cli
     shellcheck
+    sops
     terraform
     tree
     vim
