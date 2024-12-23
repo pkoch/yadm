@@ -27,6 +27,7 @@
     deno
     docker-credential-gcr
     entr
+    fzf
     gh
     gist
     git
