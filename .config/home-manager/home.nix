@@ -20,6 +20,7 @@
   home.packages = with pkgs; [
 
     awscli2
+    age
     bash-completion
     bashInteractive
     #bitwarden-cli
