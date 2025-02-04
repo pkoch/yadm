@@ -18,8 +18,8 @@
 
 [alias]
 	glb = log --graph --decorate --pretty=oneline --abbrev-commit
-	gl  = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	gla = log --graph --decorate --pretty=oneline --abbrev-commit --all --reflog
+	gl  = log --graph --decorate --pretty=oneline --abbrev-commit --all --date-order
+	gla = log --graph --decorate --pretty=oneline --abbrev-commit --all --date-order --reflog
 	b = branch
 	d = diff
 	dc = diff --cached
