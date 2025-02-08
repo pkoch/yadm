@@ -36,6 +36,7 @@
 	pra = pull --rebase --autostash
 	pff = pull --ff-only
 	pffa = pull --ff-only --autostash
+	pm = pull --no-ff --no-rebase
 	pfl = push --force-with-lease
 	fap = fetch --all --tags --prune
 	fp = fetch --prune
