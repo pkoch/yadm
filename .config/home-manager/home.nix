@@ -39,6 +39,7 @@
     gnused
     htop
     jq
+    kubectl
     lz4
     minikube
     nmap
