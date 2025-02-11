@@ -40,6 +40,7 @@
     htop
     jq
     kubectl
+    kubernetes-helm
     lz4
     minikube
     nmap
