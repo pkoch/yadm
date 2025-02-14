@@ -37,6 +37,7 @@
     git-lfs
     #gnupg
     gnused
+    hadolint
     htop
     jq
     kubectl
