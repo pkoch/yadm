@@ -124,6 +124,7 @@
 .vim/swap/
 .vim/tags/
 .vite-plugin-mkcert/
+.vscode-insiders/
 .vscode-server/
 .vscode/
 .wget-hsts
