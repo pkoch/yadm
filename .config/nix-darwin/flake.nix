@@ -16,13 +16,8 @@
         pkgs.stats
       ];
 
-      # Auto upgrade nix package and the daemon service.
-      nix = {
-        package = pkgs.nix;
-        gc.automatic = true;
-        optimise.automatic = true;
-        settings.experimental-features = "nix-command flakes";
-      };
+      # Use nix from Determinate Systems
+      nix.enable = false;
 
       # Create /etc/zshrc that loads the nix-darwin environment.
       programs.zsh.enable = true;
@@ -50,7 +45,7 @@
         home = "/Users/pkoch";
       };
 
-      security.pam.enableSudoTouchIdAuth = true;
+      security.pam.services.sudo_local.touchIdAuth = true;
     };
   in
   {
