@@ -53,8 +53,8 @@
     psutils
     pv
     ripgrep
-    sentry-cli
     shellcheck
+    shfmt
     sops
     terraform
     tree
