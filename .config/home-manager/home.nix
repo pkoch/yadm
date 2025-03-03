@@ -58,6 +58,7 @@
     sops
     terraform
     tree
+    uv
     vim
     wakeonlan
     watch
@@ -116,6 +117,7 @@
   #
   #  /etc/profiles/per-user/pkoch/etc/profile.d/hm-session-vars.sh
   #
+  home.shell.enableShellIntegration = true;
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
