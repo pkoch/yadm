@@ -1,12 +1,2 @@
-diff --git a/.bashrc b/.bashrc
-index 9219c17..d1b8bfe 100644
---- a/.bashrc
-+++ b/.bashrc
-@@ -36,3 +36,7 @@ done; unset f
- bashrc_debug "after d folder processing"
- 
- unset -f bashrc_debug
-+
-+# bun
-+export BUN_INSTALL="$HOME/.bun"
-+export PATH="$BUN_INSTALL/bin:$PATH"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
