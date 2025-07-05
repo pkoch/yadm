@@ -42,6 +42,7 @@
     jq
     kubectl
     kubernetes-helm
+    lazydocker
     lz4
     minikube
     nmap
