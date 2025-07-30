@@ -7,10 +7,13 @@
 .CFUserTextEncoding
 .DS_Store
 .Trash/
+.aws/cli/cache
 .aws/config
+.aws/sso/cache
 .bash_history
 .bash_sessions/
 .bashrc.d/.*.cached
+.bun/
 .bundle/
 .cache/
 .cargo/
@@ -58,6 +61,7 @@
 .config/vscode-sqltools/
 .config/yarn/
 .cups/
+.cursor/
 .dbus/
 .deno/
 .docker/
@@ -73,6 +77,7 @@
 .gnome/apps/chrome-*.desktop
 .gnupg/*
 .gradle/
+.ipfs/
 .ipython/
 .irb_history
 .iterm2_shell_integration.bash
@@ -89,6 +94,7 @@
 .node_repl_history
 .npm/
 .nvidia-settings-rc
+.opencode/
 .pki/
 .pnpm-state/
 .pnpm-store/
@@ -108,7 +114,7 @@
 .solargraph/
 .solc-select/
 .sqlite_history
-.ssh/id_?sa*
+.ssh/id_*
 .ssh/known_hosts
 .ssh/known_hosts.old
 .steam/
