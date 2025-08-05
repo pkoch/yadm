@@ -43,6 +43,9 @@
     kubectl
     kubernetes-helm
     lazydocker
+    lazygit
+    lima
+    lima-additional-guestagents
     lz4
     minikube
     nmap
