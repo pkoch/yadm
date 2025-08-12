@@ -47,7 +47,6 @@
     lima
     lima-additional-guestagents
     lz4
-    minikube
     nmap
     #openssh
     pass
@@ -71,6 +70,7 @@
     xz
     yq
     yubikey-manager
+    zellij
     zstd
 
     # TODO: package https://github.com/jwbargsten/defbro
