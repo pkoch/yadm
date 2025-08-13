@@ -1,0 +1,26 @@
+IMAPAccount gmail
+Host imap.gmail.com
+Port 993
+User paulo.koch@gmail.com
+PassCmd "pass google.com/isync_gato"
+TLSType IMAPS
+AuthMechs LOGIN
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Path ~/Maildir/paulo.koch_gmail.com/
+Inbox ~/Maildir/paulo.koch_gmail.com/INBOX
+SubFolders Verbatim
+
+Channel gentoo
+Far :gmail-remote:
+Near :gmail-local:
+Patterns *
+Patterns INBOX*
+Expunge None
+CopyArrivalDate yes
+Sync All
+SyncState *
+Create Both

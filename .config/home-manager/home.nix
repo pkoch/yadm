@@ -42,6 +42,7 @@
     gnused
     hadolint
     htop
+    isync
     jq
     kubectl
     kubernetes-helm
