@@ -23,6 +23,7 @@
     age
     bash-completion
     bashInteractive
+    biome
     #bitwarden-cli
     curl
     deno
