@@ -95,6 +95,7 @@
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
     "terraform"
     "vscode"
+    "claude-code"
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
