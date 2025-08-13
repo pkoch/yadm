@@ -25,6 +25,7 @@
     bashInteractive
     biome
     #bitwarden-cli
+    btop
     curl
     deno
     docker-credential-gcr
