@@ -19,12 +19,14 @@
   # environment.
   home.packages = with pkgs; [
 
-    awscli2
+    #bitwarden-cli
+    #gnupg
+    #openssh
     age
+    awscli2
     bash-completion
     bashInteractive
     biome
-    #bitwarden-cli
     btop
     curl
     deno
@@ -37,7 +39,6 @@
     git-absorb
     git-crypt
     git-lfs
-    #gnupg
     gnused
     hadolint
     htop
@@ -50,7 +51,6 @@
     lima-additional-guestagents
     lz4
     nmap
-    #openssh
     pass
     podman
     podman-compose
