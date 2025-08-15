@@ -23,7 +23,6 @@
 #   * Rust (curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh)
 #   * fnm (curl -fsSL https://fnm.vercel.app/install | bash)
 #   * rbenv (curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash)
-#   * pyenv (curl -fsSL https://pyenv.run | bash)
 # * Gnome extensions:
 #   * Dash to dock (sudo dnf -y install gnome-shell-extension-dash-to-dock)
 #   * System monitor (sudo dnf -y install gnome-shell-extension-system-monitor-applet)
