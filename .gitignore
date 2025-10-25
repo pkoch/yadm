@@ -20,6 +20,7 @@ __pycache__/
 .cargo/
 .claude.json
 .claude/
+.codex/
 .config/.gsd-keyboard.settings-ported
 .config/autostart/
 .config/BraveSoftware/
