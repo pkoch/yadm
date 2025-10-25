@@ -9,5 +9,3 @@ else
     echo "!!! No $([ -n "$SSH_CLIENT" ] && echo "remote" || echo "local") GPG private key found for $MY_GPG_KEY" >&2
   fi
 fi
-
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
