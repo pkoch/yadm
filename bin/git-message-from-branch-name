@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -ueo pipefail
+
+git rev-parse --abbrev-ref HEAD | sed 's|/|: |' | sed 's|-| |g'
