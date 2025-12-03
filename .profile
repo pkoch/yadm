@@ -1,4 +1,4 @@
-function profile_debug() {
+profile_debug() {
     false && echo "$*"
 }
 
