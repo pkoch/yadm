@@ -12,7 +12,7 @@ else
 fi
 bashrc_debug "after bashrc guard"
 
-. ~/.profile
+. "$HOME/.profile"
 bashrc_debug "after profile delegation"
 
 [ -r /etc/bashrc ] && . /etc/bashrc

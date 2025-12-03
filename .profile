@@ -24,7 +24,7 @@ for f in `find ~/.profile.d -mindepth 1 -not -name '.*' | sort -n`; do
 done; unset f
 profile_debug "after d folder processing"
 
-. ~/.bashrc
+. "$HOME/.bashrc"
 profile_debug "after bashrc delegation"
 
 unset MYPROFILESOURCED
