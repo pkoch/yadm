@@ -8,6 +8,7 @@
 .DS_Store
 .Trash/
 __pycache__/
+.android/
 .aws/cli/cache
 .aws/config
 .aws/sso/cache
@@ -117,6 +118,7 @@ __pycache__/
 .rbenv/
 .redhat/
 .rustup/
+.sdkman/
 .solargraph/
 .solc-select/
 .sqlite_history
