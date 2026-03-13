@@ -7,3 +7,6 @@
 [submodule ".password-store"]
 	path = .password-store
 	url = git@github.com:pkoch/password-store.git
+[submodule ".agents"]
+	path = .agents
+	url = git@github.com:pkoch/.agents.git
