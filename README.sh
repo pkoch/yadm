@@ -34,9 +34,15 @@
 # * Install drivers (sudo ubuntu-drivers install)
 # * Show weeks in calendar
 #
-# References to steal from
-# ========================
-# http://mywiki.wooledge.org/DotFiles
+# TODO
+# ====
+# * What do I want to do with vim? It's just rotting in there.
+# * Review my ssh keys. Settle on one per machine, ideally TPM protected.
+# * Fill Brewfile
+# * Review the split between profile (env vars, including PATH) and bashrc (auto complete and shell stuff)
+# * Add a helper function to reload all autocomplete things.
+# * Add a helper function that checks if the segment to be added to PATH is already there and bails unless we need to add it.
+# * What should I do with crontab? launchctl and systemd unit? Get rid of Dropbox?
 
 set -euo pipefail
 cd
