@@ -43,6 +43,7 @@
 # * Add a helper function to reload all autocomplete things.
 # * Add a helper function that checks if the segment to be added to PATH is already there and bails unless we need to add it.
 # * What should I do with crontab? launchctl and systemd unit? Get rid of Dropbox?
+# * Add Bolota under management again.
 
 set -euo pipefail
 cd
