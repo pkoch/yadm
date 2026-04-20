@@ -1,3 +1,0 @@
-if [[ -d "$HOME/.config/.foundry" ]]; then
-  export PATH="$PATH:$HOME/.config/.foundry/bin"
-fi
