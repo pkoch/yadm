@@ -1,5 +1,0 @@
-{% if yadm.os == "Darwin" %}
-"aarch64-darwin"
-{% else %}
-"{{ yadm.arch }}-linux"
-{% endif %}

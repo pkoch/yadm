@@ -64,8 +64,6 @@ __pycache__/
 .config/VirtualBox/
 .config/vscode-sqltools/
 .config/yarn/
-.config/zellij/config.kdl.bak
-.config/zellij/config.kdl.bak*
 .cups/
 .cursor/
 .dbus/
