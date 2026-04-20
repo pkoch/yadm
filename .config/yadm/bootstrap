@@ -9,8 +9,6 @@ chmod 600 .ssh/*
 yadm remote set-url origin "git@github.com:pkoch/yadm.git"
 yadm submodule update --recursive --init
 
-~/.apt.sh || echo 1>&2 '!!! Unable to apt install'
-
 . .profile
 
 # Make vim not complain about input and output

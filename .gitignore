@@ -171,3 +171,6 @@ snap/
 Syncthing/
 VirtualBox VMs/
 Maildir/
+.spotiflac/
+.nodenv/
+.config/zed/

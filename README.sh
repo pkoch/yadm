@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # YADM
 # ====
+#
+# Run:
+# ```bash
+# wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash
+# ```
+#
+# What's not included:
 # * visudo: NOPASSWD
 # * Confirm drivers (sudo dnf -y install akmod-nvidia)
 # * Instal
@@ -11,8 +18,6 @@
 #   * Spotify (sudo flatpak install com.spotify.Client)
 #   * Emoji selector
 #   * docker engine
-#   * VS Code (manual download)
-#     * Sync settings
 #   * pass
 #   * Clipboard manager (gpaste, Maccy)
 #   * Syncthing
@@ -21,8 +26,6 @@
 #   * Obsidian
 #   * Golang
 #   * Rust (curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh)
-#   * fnm (curl -fsSL https://fnm.vercel.app/install | bash)
-#   * rbenv (curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash)
 # * Gnome extensions:
 #   * Dash to dock (sudo dnf -y install gnome-shell-extension-dash-to-dock)
 #   * System monitor (sudo dnf -y install gnome-shell-extension-system-monitor-applet)
@@ -30,9 +33,9 @@
 # * Setup keyboard (Caps, Compose)
 # * Install drivers (sudo ubuntu-drivers install)
 # * Show weeks in calendar
-# * https://install.determinate.systems/
-# * wget -qO - https://raw.githubusercontent.com/pkoch/yadm/master/README.sh | bash
 #
+# References to steal from
+# ========================
 # http://mywiki.wooledge.org/DotFiles
 
 set -euo pipefail

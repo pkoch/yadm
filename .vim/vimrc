@@ -10,15 +10,11 @@ silent! if plug#begin()
   Plug 'tpope/vim-sensible'
 
   Plug 'FooSoft/vim-argwrap'
-  Plug 'LnL7/vim-nix'
   Plug 'cakebaker/scss-syntax.vim'
-  Plug 'christoomey/vim-sort-motion'
-  Plug 'dag/vim-fish'
   Plug 'eapache/rainbow_parentheses.vim'
   Plug 'hashivim/vim-terraform'
   Plug 'mxw/vim-jsx'
   Plug 'othree/es.next.syntax.vim'
-  Plug 'othree/yajs.vim'
   Plug 'pangloss/vim-javascript'
   Plug 'scrooloose/nerdtree'
   Plug 'slashmili/alchemist.vim'
@@ -35,6 +31,7 @@ silent! if plug#begin()
   if v:version >= 703
     Plug 'gorodinskiy/vim-coloresque'
   endif
+
   if v:version >= 704
     Plug 'vim-pandoc/vim-pandoc-syntax'
   endif
