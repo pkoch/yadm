@@ -70,7 +70,6 @@ __pycache__/
 .cursor/
 .dbus/
 .deno/
-.docker/
 .docker/.buildNodeID
 .dotnet/
 .dropbox-dist/
