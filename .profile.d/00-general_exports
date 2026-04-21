@@ -1,9 +1,20 @@
 export EDITOR=vim
-
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
+export VISUAL=vim
 
 export LESS="-SFRXx4"
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export BASH_SILENCE_DEPRECATION_WARNING=1  # macOS
 export LANG="en_US.UTF-8"
+
+function prepend_path_if_missing() {
+    local path="$1"
+
+    if ! test -d "$path"; then return; fi
+
+    if [[ ":$PATH:" != *":$path:"* ]]; then
+        export PATH="$path:$PATH"
+    fi
+}
+
+prepend_path_if_missing "$HOME/.local/bin"
+prepend_path_if_missing "$HOME/bin"
