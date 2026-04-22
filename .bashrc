@@ -12,8 +12,10 @@ else
 fi
 bashrc_debug "after bashrc guard"
 
-. "$HOME/.profile"
-bashrc_debug "after profile delegation"
+if [ -r "$HOME/.bash_profile" ]; then
+  . "$HOME/.bash_profile"
+  bashrc_debug "after bash_profile delegation"
+fi
 
 [ -r /etc/bashrc ] && . /etc/bashrc
 bashrc_debug "after machine bashrc"
@@ -28,6 +30,11 @@ case $- in
     return ;;
 esac
 bashrc_debug "after interactive check"
+
+if [ -r "$HOME/.bazshrc" ]; then
+  . "$HOME/.bazshrc"
+  bashrc_debug "after bazshrc delegation"
+fi
 
 for f in `find ~/.bashrc.d/ -mindepth 1 -not -name '.*' | sort -n`; do
   bashrc_debug "bashrc sourcing $f"

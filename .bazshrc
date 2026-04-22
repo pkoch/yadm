@@ -1,0 +1,15 @@
+bazshrc_debug() {
+    false && echo "$*"
+}
+
+bazshrc_debug "start bazshrc"
+
+if [ -d "$HOME/.bazshrc.d" ]; then
+    for f in `find ~/.bazshrc.d/ -mindepth 1 -not -name '.*' | sort -n`; do
+        bazshrc_debug "bazshrc sourcing $f"
+        . "$f"
+    done
+    unset f
+fi
+
+unset -f bazshrc_debug

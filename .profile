@@ -24,13 +24,6 @@ for f in `find ~/.profile.d -mindepth 1 -not -name '.*' | sort -n`; do
 done; unset f
 profile_debug "after d folder processing"
 
-if [ -n "${BASH_VERSION:-}" ] && [ -r "$HOME/.bashrc" ]; then
-    . "$HOME/.bashrc"
-    profile_debug "after bashrc delegation"
-else
-    profile_debug "skip bashrc delegation outside bash"
-fi
-
 unset MYPROFILESOURCED
 profile_debug "after all profile"
 

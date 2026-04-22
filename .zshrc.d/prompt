@@ -1,0 +1,9 @@
+autoload -Uz add-zsh-hook
+
+prompt_update_zsh() {
+    PROMPT="$(prompt_render "$?")"
+}
+
+add-zsh-hook -d precmd prompt_update_zsh 2>/dev/null
+add-zsh-hook precmd prompt_update_zsh
+prompt_update_zsh

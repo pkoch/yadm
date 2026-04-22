@@ -1,0 +1,32 @@
+prompt_render() {
+    local prompt_ret="$1"
+    local prompt_user prompt_host prompt_cwd prompt_home_prefix
+
+    prompt_user="${USER:-$(id -un)}"
+    prompt_host="${HOSTNAME:-${HOST:-}}"
+    prompt_host="${prompt_host%%.*}"
+
+    if [ -z "$prompt_host" ]; then
+        prompt_host="$(hostname -s 2>/dev/null || hostname)"
+    fi
+
+    prompt_cwd="$PWD"
+    prompt_home_prefix="${HOME%/}/"
+
+    case "$prompt_cwd" in
+        "$HOME")
+            prompt_cwd='~'
+            ;;
+        "$prompt_home_prefix"*)
+            prompt_cwd="~/${prompt_cwd#"$prompt_home_prefix"}"
+            ;;
+    esac
+
+    if [ "$prompt_ret" != "0" ]; then
+        printf '⚠️  %s\n\n' "$prompt_ret"
+    fi
+
+    printf '%s\n' "$(date '+%Y-%m-%dT%T%z')"
+    printf '%s@%s:%s\n' "$prompt_user" "$prompt_host" "$prompt_cwd"
+    printf '$ '
+}
