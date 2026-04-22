@@ -1,0 +1,5 @@
+# Terraform completion uses complete -C in both shells; zsh gets
+# complete from the bash-completion compatibility layer.
+if command -v terraform >/dev/null 2>&1; then
+    complete -C "$(command -v terraform)" terraform
+fi

@@ -1,0 +1,10 @@
+YADM_ZSH_COMPLETION_DIR="$HOME/.yadm-project/completion/zsh"
+
+if [ -d "$YADM_ZSH_COMPLETION_DIR" ]; then
+    FPATH="$YADM_ZSH_COMPLETION_DIR:$FPATH"
+
+    autoload -Uz _yadm
+    compdef _yadm yadm y
+fi
+
+unset YADM_ZSH_COMPLETION_DIR

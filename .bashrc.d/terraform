@@ -1,3 +1,0 @@
-if command -v terraform &>/dev/null; then
-  complete -C `which terraform` terraform
-fi
