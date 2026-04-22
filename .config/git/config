@@ -4,13 +4,13 @@
 	signingKey = F6B4B93498A0C85D
 
 [includeIf "gitdir:~/github.com/lifeonmarspt/"]
-	path = .gitconfig-lom
+	path = config-lom
 
 [includeIf "gitdir:~/github.com/trustfractal/"]
-	path = .gitconfig-fractal
+	path = config-fractal
 
 [includeIf "gitdir:~/github.com/idos-network/"]
-	path = .gitconfig-idos
+	path = config-idos
 
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
