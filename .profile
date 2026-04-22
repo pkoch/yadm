@@ -12,9 +12,6 @@ else
 fi
 profile_debug "after profile guard"
 
-[ -r /etc/profile ] && . /etc/profile
-profile_debug "after machine profile"
-
 for f in `find ~/.profile.d -mindepth 1 -not -name '.*' | sort -n`; do
     profile_debug "profile sourcing $f"
     case $- in
