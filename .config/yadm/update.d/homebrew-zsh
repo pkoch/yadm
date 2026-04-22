@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+if ! command -v brew >/dev/null; then
+  exit 0
+fi
+
+HOMEBREW_PREFIX="${HOMEBREW_PREFIX:-$(brew --prefix)}"
+
+brew completions link
+
+chmod go-w "$HOMEBREW_PREFIX/share" 2>/dev/null || true
+chmod -R go-w "$HOMEBREW_PREFIX/share/zsh" 2>/dev/null || true
+
+rm -f "$HOME/.zcompdump"
+
+unset HOMEBREW_PREFIX

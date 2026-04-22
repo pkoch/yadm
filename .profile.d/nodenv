@@ -1,3 +1,3 @@
-if command -v nodenv &>/dev/null; then
-  . <(nodenv init - --no-rehash bash)
+if command -v nodenv >/dev/null 2>&1; then
+    prepend_path_if_missing "${NODENV_ROOT:-$(nodenv root)}/shims"
 fi

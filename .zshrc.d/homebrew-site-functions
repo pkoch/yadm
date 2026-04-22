@@ -1,0 +1,12 @@
+if [ -n "${HOMEBREW_PREFIX:-}" ]; then
+    HOMEBREW_ZSH_SITE_FUNCTIONS="$HOMEBREW_PREFIX/share/zsh/site-functions"
+
+    if [ -d "$HOMEBREW_ZSH_SITE_FUNCTIONS" ]; then
+        FPATH="$HOMEBREW_ZSH_SITE_FUNCTIONS:$FPATH"
+    fi
+
+    autoload -Uz compinit
+    whence compdef >/dev/null 2>&1 || compinit -C
+
+    unset HOMEBREW_ZSH_SITE_FUNCTIONS
+fi
