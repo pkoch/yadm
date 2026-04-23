@@ -38,7 +38,6 @@ brew "ripgrep"
 brew "shellcheck"
 brew "shfmt"
 brew "sops"
-brew "telnet"
 brew "uv"
 brew "vim"
 brew "watch"
@@ -54,8 +53,8 @@ brew "zstd"
 cask "1password-cli"
 cask "claude-code"
 cask "codex"
-cask "ovh/tap/ovhcloud-cli"
 
+go "github.com/ovh/ovhcloud-cli/cmd/ovhcloud"
 go "golang.org/x/tools/gopls"
 
 if OS.linux?
@@ -85,11 +84,12 @@ if OS.linux?
 end
 
 if OS.mac?
-  brew "mas"
+  brew "jwbargsten/misc/defbro"
   brew "lima"
   brew "lima-additional-guestagents"
+  brew "mas"
   brew "slp/krun/krunkit"
-  brew "jwbargsten/misc/defbro"
+  brew "telnet"
 
   cask "1password"
   cask_args appdir: "~/Applications"

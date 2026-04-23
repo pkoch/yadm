@@ -36,7 +36,6 @@
 #
 # TODO
 # ====
-# * Fill Brewfile.
 # * Decomission crontab in favor of Syncthing.
 # * Add Bolota under management again.
 # * Decomission secrets in favor of file-snitch + pass
