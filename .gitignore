@@ -171,3 +171,4 @@ Maildir/
 .config/zed/
 .PTEID*.log
 .config/htop/
+.eidmwcache/
