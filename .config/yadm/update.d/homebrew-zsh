@@ -5,7 +5,7 @@ fi
 
 HOMEBREW_PREFIX="${HOMEBREW_PREFIX:-$(brew --prefix)}"
 
-brew completions link
+brew completions link | grep -v 'Completions are now linked.'
 
 chmod go-w "$HOMEBREW_PREFIX/share" 2>/dev/null || true
 chmod -R go-w "$HOMEBREW_PREFIX/share/zsh" 2>/dev/null || true
