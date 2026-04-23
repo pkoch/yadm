@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 cd "$HOME"
 
-mkdir -p .ssh
+mkdir -p .ssh/controlmasters
 ssh-keyscan github.com | grep -v '^#' 2>&1 >> ~/.ssh/known_hosts
 chmod 700 .ssh
 chmod 600 .ssh/*
+chmod 700 .ssh/controlmasters
 
 yadm remote set-url origin "git@github.com:pkoch/yadm.git"
 yadm submodule update --recursive --init
@@ -15,6 +16,7 @@ yadm submodule update --recursive --init
 script -qc "vim '+PlugUpdate' '+PlugClean"'!'"' '+qall'" /dev/null
 
 # Require GPG key to be loaded, or abort with instructions.
+. .profile.d/ZZ-gpg
 if ! has_private_key; then
   echo 1>&2 '!!! You need the private key loaded to proceed with the rest of the bootstartp.'
   echo 1>&2 '!!! Get the key in place (make sure it shows up on gpg -K) and run this script again.'
