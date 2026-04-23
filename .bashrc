@@ -43,7 +43,3 @@ done; unset f
 bashrc_debug "after d folder processing"
 
 unset -f bashrc_debug
-
-if command -v tirith >/dev/null 2>&1; then
-  eval "$(tirith init --shell bash)"
-fi
