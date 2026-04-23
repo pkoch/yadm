@@ -96,8 +96,8 @@ if OS.mac?
   brew "slp/krun/krunkit"
   brew "jwbargsten/misc/defbro"
 
-  cask_args appdir: "~/Applications"
   cask "1password"
+  cask_args appdir: "~/Applications"
   cask "bitwarden"
   cask "discord"
   cask "firefox"
