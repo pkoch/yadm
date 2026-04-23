@@ -36,20 +36,18 @@
 #
 # TODO
 # ====
+# * Fill Brewfile.
+# * Decomission crontab in favor of Syncthing.
+# * Add Bolota under management again.
+# * Decomission secrets in favor of file-snitch + pass
 # * What do I want to do with vim? It's just rotting in there.
 # * Review my ssh keys. Settle on one per machine, ideally TPM protected.
-# * Fill Brewfile
-# * Review the split between profile (env vars, including PATH) and bashrc (auto complete and shell stuff)
-# * Add a helper function to reload all autocomplete things.
-# * Add a helper function that checks if the segment to be added to PATH is already there and bails unless we need to add it.
-# * What should I do with crontab? launchctl and systemd unit? Get rid of Dropbox?
-# * Add Bolota under management again.
 
 set -euo pipefail
 cd
 
 mkdir -p bin_install
 export PATH="$PATH:$HOME/bin_install"
-wget -qO ~/bin_install/yadm https://github.com/TheLocehiliosan/yadm/raw/master/yadm && chmod a+x ~/bin_install/yadm
+wget -qO ~/bin_install/yadm https://raw.githubusercontent.com/yadm-dev/yadm/master/yadm && chmod a+x ~/bin_install/yadm
 yadm clone --bootstrap https://github.com/pkoch/yadm.git # This runs .config/yadm/bootstrap
 rm -rf bin_install
