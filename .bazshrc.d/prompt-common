@@ -23,7 +23,7 @@ prompt_render() {
     esac
 
     if [ "$prompt_ret" != "0" ]; then
-        printf '⚠️  %s\n\n' "$prompt_ret"
+        printf '⚠️  %s\n' "$prompt_ret"
     fi
 
     printf '%s\n' "$(date '+%Y-%m-%dT%T%z')"

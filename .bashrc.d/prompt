@@ -2,5 +2,15 @@ prompt_update_bash() {
     PS1="$(prompt_render "$?")"
 }
 
-PROMPT_COMMAND="prompt_update_bash${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
+case ";${PROMPT_COMMAND-};" in
+    *";prompt_update_bash;"*)
+        ;;
+    "")
+        PROMPT_COMMAND="prompt_update_bash"
+        ;;
+    *)
+        PROMPT_COMMAND="prompt_update_bash; $PROMPT_COMMAND"
+        ;;
+esac
+
 prompt_update_bash
