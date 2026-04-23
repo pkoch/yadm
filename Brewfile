@@ -1,58 +1,56 @@
-#age
-#bitwarden-cli
-#curl
-#entr
-#gist
-#gnupg
-#gnused
-#hadolint
-#jq
-#podman
-#podman-compose
-#psutils
-#pv
-#vim
-#watch
-#wget
-#xxHash
-#xz
-#zstd
-
-# Bolota Brewfile
+brew "age"
 brew "asciinema"
 brew "awscli"
 brew "bash"
 brew "bash-completion@2"
+brew "bitwarden-cli"
 brew "cloudflared"
+brew "curl"
 brew "devcontainer"
 brew "docker-credential-helper"
 brew "docker-credential-helper-ecr"
+brew "entr"
 brew "fzf"
 brew "gh"
+brew "gist"
 brew "git"
 brew "git-absorb"
 brew "git-crypt"
 brew "git-lfs"
 brew "gnu-sed"
+brew "gnupg"
+brew "gnused"
 brew "go"
+brew "hadolint"
 brew "hashicorp/tap/terraform"
+brew "jq"
 brew "nmap"
 brew "node"
 brew "nodenv"
 brew "pass"
 brew "pkoch/tap/file-snitch"
 brew "pnpm"
+brew "podman"
+brew "podman-compose"
 brew "pre-commit"
+brew "psutils"
+brew "pv"
 brew "ripgrep"
 brew "shellcheck"
 brew "shfmt"
 brew "sops"
 brew "telnet"
 brew "uv"
+brew "vim"
+brew "watch"
+brew "wget"
+brew "xxHash"
+brew "xz"
 brew "yarn"
 brew "ykman"
 brew "yq"
 brew "zig"
+brew "zstd"
 
 cask "1password-cli"
 cask "claude-code"
