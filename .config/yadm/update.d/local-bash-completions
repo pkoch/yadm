@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+COMPLETION_USER_DIR="${BASH_COMPLETION_USER_DIR-}"
+COMPLETION_USER_DIR="${COMPLETION_USER_DIR%%:*}"
+COMPLETION_CACHE_DIR="${COMPLETION_USER_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion}/completions"
+
+install_completion() {
+	local bin_name="$1"
+	local regen_script="$2"
+	local cache_file="$COMPLETION_CACHE_DIR/$bin_name"
+	local tmp_file
+
+	if ! command -v "$bin_name" >/dev/null; then
+		return
+	fi
+
+	tmp_file="$(mktemp "$COMPLETION_CACHE_DIR/$bin_name.XXXXXX")"
+	if bash -c "$regen_script" >"$tmp_file"; then
+		mv "$tmp_file" "$cache_file"
+	else
+		rm -f "$tmp_file"
+		return 1
+	fi
+}
+
+mkdir -p "$COMPLETION_CACHE_DIR"
+
+install_completion "gh" "gh completion -s bash"
+install_completion "git-absorb" "git-absorb --gen-completions bash"
+install_completion "ovhcloud" "ovhcloud completion bash"
+install_completion "pnpm" "pnpm completion bash"
+install_completion "podman" "podman completion bash"
+install_completion "rbenv" "rbenv init - bash"
+install_completion "ykman" "_YKMAN_COMPLETE=bash_source ykman"
