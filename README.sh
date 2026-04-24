@@ -38,7 +38,6 @@
 # ====
 # * Decomission crontab in favor of Syncthing.
 # * Decomission secrets in favor of file-snitch + pass
-# * What do I want to do with vim? It's just rotting in there.
 # * Review my ssh keys. Settle on one per machine, ideally TPM protected.
 
 set -euo pipefail
