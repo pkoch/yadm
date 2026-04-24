@@ -8,33 +8,14 @@ endif
 silent! if plug#begin()
 
   Plug 'tpope/vim-sensible'
-
-  Plug 'FooSoft/vim-argwrap'
-  Plug 'cakebaker/scss-syntax.vim'
   Plug 'eapache/rainbow_parentheses.vim'
-  Plug 'hashivim/vim-terraform'
-  Plug 'mxw/vim-jsx'
-  Plug 'othree/es.next.syntax.vim'
-  Plug 'pangloss/vim-javascript'
-  Plug 'scrooloose/nerdtree'
-  Plug 'slashmili/alchemist.vim'
-  Plug 'tomlion/vim-solidity'
   Plug 'tpope/vim-abolish'
-  Plug 'tpope/vim-dispatch'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-rsi'
   Plug 'tpope/vim-sleuth'
-  Plug 'w0rp/ale'
-
-  if v:version >= 703
-    Plug 'gorodinskiy/vim-coloresque'
-  endif
-
-  if v:version >= 704
-    Plug 'vim-pandoc/vim-pandoc-syntax'
-  endif
+  Plug 'dense-analysis/ale'
 
   call plug#end()
 endif
@@ -99,7 +80,7 @@ endfor
 " Retore last edit location when opening a file
 autocmd BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$") | exe "normal g'\"" | exe "normal zz" | endif
 
-" Raibow parens
+" Rainbow parens
 au VimEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
@@ -136,38 +117,23 @@ nnoremap <leader>e :call FzyCommand("rg . -l", ":e")<cr>
 nnoremap <leader>v :call FzyCommand("rg . -l", ":vs")<cr>
 nnoremap <leader>s :call FzyCommand("rg . -l", ":sp")<cr>
 
-" <C-@> is what vim gets when you press Control+Space
-inoremap <C-@> <c-x><c-o>
-
-autocmd FileType elixir let b:argwrap_tail_comma_braces = '[{'
-autocmd FileType ruby let b:argwrap_tail_comma_braces = '[{('
-autocmd FileType javascript let b:argwrap_tail_comma_braces = '[{('
-
-nnoremap <silent> <leader>n :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" https://github.com/scrooloose/nerdtree/issues/522
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="-"
-
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
-\   'ruby': ['rubocop'],
 \}
-let g:ale_fix_on_save = 1
 let g:ale_open_list = 0
-
-nnoremap <silent> <leader><leader> :ArgWrap<CR>
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['eslint'],
+\   'python': ['ruff', 'flake8'],
+\   'ruby': ['rubocop'],
+\   'sh': ['shellcheck'],
+\}
+nnoremap <silent> <leader>f :ALEFix<CR>
 
 nnoremap <silent> <leader>/ :nohl<CR>
 
 autocmd BufRead,BufNewFile,BufWritePost * setlocal signcolumn=yes
-autocmd FileType tagbar,nerdtree setlocal signcolumn=no
-autocmd FileType solidity setlocal softtabstop=2 tabstop=2 shiftwidth=2 expandtab
-
-let g:gutentags_cache_dir='~/.vim/tags'
-let g:gutentags_define_advanced_commands = 1
 
 tnoremap  <C-W>N
