@@ -1,0 +1,30 @@
+if [ "$(uname -s)" = "Darwin" ]; then
+  function alert() {
+    local status=$?
+    local subtitle="Finished"
+    [ "$status" -ne 0 ] && subtitle="Failed ($status)"
+
+    local msg="$(fc -ln -1 | sed -e 's/^[[:space:]]*//;s/[;&|][[:space:]]*alert$//')"
+
+    /usr/bin/osascript \
+      -e 'on run argv' \
+      -e 'display notification (item 2 of argv) with title "Terminal" subtitle (item 1 of argv) sound name "Glass"' \
+      -e 'end run' \
+      "$subtitle" "$msg"
+
+    return "$status"
+  }
+else
+  function alert() {
+    local status=$?
+    local icon=terminal
+    [ "$status" -ne 0 ] && icon=error
+
+    local msg="$(fc -ln -1 | sed -e 's/^[[:space:]]*//;s/[;&|][[:space:]]*alert$//')"
+
+    notify-send --urgency=low -i "$icon" "$msg"
+
+    return "$status"
+  }
+fi
+

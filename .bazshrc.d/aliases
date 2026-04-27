@@ -2,4 +2,3 @@ alias y=yadm
 alias ls='ls -GFhb'
 alias la='ls -a'
 alias ll='la -pl'
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(fc -ln -1 | sed -e '\''s/^[[:space:]]*//;s/[;&|][[:space:]]*alert$//'\'')"'
