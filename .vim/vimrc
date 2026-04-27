@@ -1,8 +1,14 @@
 set nocompatible  " Vim, not vi.
+if !empty($HOMEBREW_PREFIX)
+  execute 'set rtp+=' . fnameescape($HOMEBREW_PREFIX . '/opt/fzf')
+endif
 
 if empty(glob("~/.vim/autoload/plug.vim"))
   silent! execute '!~/.config/yadm/update.d/vim-plug'
-  autocmd VimEnter * silent! PlugInstall
+  augroup pkoch_vim_plug
+    autocmd!
+    autocmd VimEnter * silent! PlugInstall
+  augroup END
 endif
 
 silent! if plug#begin()
@@ -63,7 +69,10 @@ if version >= 703
 endif
 
 
-autocmd FocusLost * silent! wall
+augroup pkoch_autowrite
+  autocmd!
+  autocmd FocusLost * silent! wall
+augroup END
 " set clipboard=unnamed " Share paste buffers with OS.
 
 colorscheme elflord
@@ -72,20 +81,27 @@ colorscheme elflord
 " These are files we are not likely to want to edit or read.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.pyo,.pyc,.rbc
 
-let wildignore = []
-for suffix in split(&suffixes, ',')
-  let wildignore += [ escape(suffix, '.~$') . '$' ]
-endfor
+let &wildignore = join(map(split(&suffixes, ','), '"*" . v:val'), ',')
 
 " Retore last edit location when opening a file
-autocmd BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$") | exe "normal g'\"" | exe "normal zz" | endif
+augroup pkoch_restore_cursor
+  autocmd!
+  autocmd BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$") | exe "normal g'\"" | exe "normal zz" | endif
+augroup END
 
 " Rainbow parens
-au VimEnter * RainbowParenthesesActivate
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-au Syntax * set textwidth=80 formatoptions+=t
+augroup pkoch_rainbow_parens
+  autocmd!
+  autocmd VimEnter * RainbowParenthesesActivate
+  autocmd Syntax * RainbowParenthesesLoadRound
+  autocmd Syntax * RainbowParenthesesLoadSquare
+  autocmd Syntax * RainbowParenthesesLoadBraces
+augroup END
+
+augroup pkoch_filetype_defaults
+  autocmd!
+  autocmd FileType * setlocal textwidth=80 formatoptions+=t
+augroup END
 
 let c_space_errors=1
 
@@ -101,21 +117,21 @@ nnoremap  :cn
 " Select pasted text
 noremap gp `[v`]`
 
-function! FzyCommand(choice_command, vim_command)
+function! FzfCommand(choice_command, vim_command)
   try
-    let output = system(a:choice_command . " | fzy ")
+    let output = system(a:choice_command . " | fzf ")
   catch /Vim:Interrupt/
     " Swallow errors from ^C, allow redraw! below
   endtry
   redraw!
   if v:shell_error == 0 && !empty(output)
-    exec a:vim_command . ' ' . output
+    exec a:vim_command . ' ' . fnameescape(trim(output))
   endif
 endfunction
 
-nnoremap <leader>e :call FzyCommand("rg . -l", ":e")<cr>
-nnoremap <leader>v :call FzyCommand("rg . -l", ":vs")<cr>
-nnoremap <leader>s :call FzyCommand("rg . -l", ":sp")<cr>
+nnoremap <leader>e :call FzfCommand("rg --files", ":e")<cr>
+nnoremap <leader>v :call FzfCommand("rg --files", ":vs")<cr>
+nnoremap <leader>s :call FzfCommand("rg --files", ":sp")<cr>
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -134,6 +150,7 @@ nnoremap <silent> <leader>f :ALEFix<CR>
 
 nnoremap <silent> <leader>/ :nohl<CR>
 
-autocmd BufRead,BufNewFile,BufWritePost * setlocal signcolumn=yes
-
-tnoremap  <C-W>N
+augroup pkoch_signcolumn
+  autocmd!
+  autocmd BufRead,BufNewFile,BufWritePost * setlocal signcolumn=yes
+augroup END
