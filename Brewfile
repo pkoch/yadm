@@ -84,11 +84,14 @@ if OS.linux?
 end
 
 if OS.mac?
+  brew "container"
+  brew "docker"
   brew "jwbargsten/misc/defbro"
   brew "lima"
   brew "lima-additional-guestagents"
   brew "mas"
   brew "slp/krun/krunkit"
+  brew "socktainer/tap/socktainer"
   brew "telnet"
 
   cask "1password"
