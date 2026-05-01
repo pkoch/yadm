@@ -94,7 +94,6 @@ if OS.mac?
   brew "lima"
   brew "mas"
   brew "slp/krun/krunkit"
-  brew "socktainer/tap/socktainer"
   brew "telnet"
 
   cask "1password"
