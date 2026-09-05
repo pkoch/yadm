@@ -1,0 +1,10 @@
+{
+  "trustedtaps": [
+    "hashicorp/tap",
+    "jwbargsten/misc",
+    "libkrun/krun",
+    "ovh/tap",
+    "pkoch/tap",
+    "slp/krun"
+  ]
+}
