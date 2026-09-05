@@ -175,3 +175,9 @@ Maildir/
 .docker/contexts/
 .config/kilo/
 .coderabbit/
+.config/1Password/
+.config/gcloud/
+.foundry/
+.kwil-cli/
+.reticulum-meshchatx/
+.reticulum/
