@@ -26,6 +26,9 @@ install_completion() {
 
 mkdir -p "$COMPLETION_CACHE_DIR"
 
+install_completion "anvil" "anvil completions bash" # Foundry
+install_completion "cast" "cast completions bash" # Foundry
+install_completion "forge" "forge completions bash" # Foundry
 install_completion "gh" "gh completion -s bash"
 install_completion "git-absorb" "git-absorb --gen-completions bash"
 install_completion "ovhcloud" "ovhcloud completion bash"
