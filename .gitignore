@@ -1,4 +1,4 @@
-!.gnupg/gpg-agent.conf##template
+!.gnupg/gpg-agent.conf
 !.gnupg/gpg.conf
 !.gnupg/ownertrust
 !.gnupg/pubring.asc.d/
