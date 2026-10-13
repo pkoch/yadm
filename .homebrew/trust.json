@@ -1,12 +1,13 @@
 {
   "trustedtaps": [
     "hashicorp/tap",
-    "ublue-os/experimental-tap",
+    "jwbargsten/misc",
     "kilo-org/tap",
+    "libkrun/krun",
     "ovh/tap",
     "pkoch/tap",
-    "jwbargsten/misc",
     "sheeki03/tap",
-    "stuartleeks/tap"
+    "stuartleeks/tap",
+    "ublue-os/experimental-tap"
   ]
 }
