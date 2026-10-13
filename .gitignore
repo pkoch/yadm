@@ -181,3 +181,5 @@ Maildir/
 .kwil-cli/
 .reticulum-meshchatx/
 .reticulum/
+Application Support/PatchKit/sender_id
+.config/opencode/
