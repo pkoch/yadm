@@ -1,6 +1,8 @@
 {
   "trustedtaps": [
     "hashicorp/tap",
+    "https://github.com:443/pkoch/homebrew-tap",
+    "https://github.com:443/ublue-os/homebrew-experimental-tap",
     "jwbargsten/misc",
     "kilo-org/tap",
     "libkrun/krun",
